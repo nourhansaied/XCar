@@ -1,0 +1,131 @@
+#slider {
+    background: linear-gradient(rgba($black, 0.75),
+            rgba($black, 0.74)),
+        /* bottom, image */
+        url(../images/h1.png);
+    height: calc(100vh - 100px);
+    background-size: cover;
+    position: relative;
+
+    #main-slider {
+        text-align: center;
+        margin: 6rem auto;
+    }
+
+    .slide {
+        outline: none;
+
+        h1 {
+            font-family: Pacifico-Regular, Arial, Helvetica, sans-serif;
+            font-size: 1.9rem;
+            color: $secondary;
+
+            @include mq('sm', min) {
+                font-size: 2.95rem;
+            }
+            @include mq('lg', min) {
+                font-size: 3.75rem;
+            }
+        }
+
+        p {
+            @include mq('sm', min) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .slick-dots {
+        li {
+            margin: 0 0.5rem;
+
+            button {
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                background-color: #ccc;
+
+                &::before {
+                    content: none;
+                }
+
+
+                @include mq('sm', min) {
+                    width: 1.15rem;
+                    height: 1.15rem;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background-color: $secondary;
+                    width: 1.35rem;
+                    height: 1.35rem;
+
+
+                    @include mq('sm', min) {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .social {
+        position: absolute;
+        top: 20%;
+        #{$left}: 5%;
+        display: none;
+
+        @include mq('sm', min) {
+            display: block;
+        }
+
+        a {
+            background: $primary;
+
+            &.phone {
+                writing-mode: vertical-rl;
+                background: none;
+                color: $white;
+                height: auto;
+            }
+
+            &:hover {
+                background: $secondary;
+
+                &.phone {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    .opening-hours {
+        text-transform: uppercase;
+        font-size: .9rem;
+        font-family: Poppins-SemiBoldItalic;
+        margin-bottom: 2rem;
+
+
+        @include mq('sm', min) {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+
+        i {
+            color: $secondary;
+            margin-#{$left}: 0.25rem;
+        }
+    }
+
+    .input-group-append {
+        justify-content: center;
+
+
+        @include mq('sm', min) {
+            justify-content: flex-end;
+        }
+    }
+}

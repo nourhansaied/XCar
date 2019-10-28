@@ -1,0 +1,5 @@
+<button class="lang-flag" (click)="changeLanguage($event,'ar')"
+  [ngClass]="{'active':isArabicLanguage}">عربي</button>
+
+<button class="lang-flag" (click)="changeLanguage($event,'en')"
+  [ngClass]="{'active':!isArabicLanguage}">English</button>

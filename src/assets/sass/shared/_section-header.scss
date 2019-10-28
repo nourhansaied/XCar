@@ -1,0 +1,19 @@
+.section-header {
+    font-family: Pacifico-Regular, Arial, Helvetica, sans-serif ;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    color: $white;
+    display: inline-block;
+    position: relative;
+
+    &::before{
+        @extend %underline;
+        background: $primary;
+    }
+
+    @include mq('xs', min) {
+        font-size: 3.5rem;
+    }
+}

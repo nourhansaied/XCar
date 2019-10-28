@@ -1,0 +1,35 @@
+footer {
+    background-color: $light-black;
+    padding: 4rem 0;
+
+    .bold {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    .action {
+        color: $white;
+        display: block;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .menu-items {
+        a {
+            color: $secondary;
+            text-transform: capitalize;
+        }
+    }
+
+    .social {
+        a {
+            background: #161B11;
+            
+            &:hover{
+                background: $secondary;
+            }
+        }
+    }
+}

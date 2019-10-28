@@ -1,0 +1,42 @@
+@import "./base/reset";
+/****************** Vendors ******************/
+/****************** Bootstrap ******************/
+
+@import "./vendors/boostrap/bootstrap-grid";
+@import "./vendors/boostrap/bootstrap-reboot";
+@import "./vendors/boostrap/bootstrap";
+
+/****************** Variables & Mixin ******************/
+
+@import "./utilities/color-variables";
+@import "./utilities/variables-rtl";
+@import "./utilities/variables";
+@import "./utilities/color-variables";
+@import "./utilities/mixins";
+@import "./utilities/placeholders";
+@import "./utilities/fonts";
+@import "./utilities/icons";
+@import "./base/common";
+
+/****************** Layout ******************/
+
+@import "./layout/main-nav";
+@import "./layout/footer";
+
+/****************** Shared ******************/
+
+@import "./shared/loader";
+@import "./shared/section-header";
+@import "./shared/btn";
+
+/****************** page section ******************/
+
+/****************** Home page ******************/
+@import "./page-section/home/header";
+@import "./page-section/home/slider";
+@import "./page-section/home/about-us";
+
+
+@import "./shared/rtl";
+
+*{direction: rtl}

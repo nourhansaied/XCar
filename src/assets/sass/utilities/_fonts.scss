@@ -1,0 +1,16 @@
+/**
+* @name : Roboto
+* @wight : Light => 300, Regular => 400, Medium => 500,  Bold => 700
+**/
+
+@include font-face('Pacifico-Regular', "../fonts/Pacifico-Regular", 400, normal, eot woff woff2 ttf);
+
+@include font-face('Poppins-Regular', "../fonts/Poppins-Regular", 400, normal, eot woff woff2);
+@include font-face('Poppins-Medium', "../fonts/Poppins-Medium", 500, normal, eot woff woff2);
+@include font-face('Poppins-SemiBoldItalic', "../fonts/Poppins-SemiBoldItalic", 600, normal, eot woff woff2);
+@include font-face('Poppins-Bold', "../fonts/Poppins-Bold", 700, normal, eot woff woff2);
+
+@include font-face('icomoon', "../fonts/icomoon", 300, normal, eot woff woff2);
+@include font-face('icomoon', "../fonts/icomoon", 400, normal, eot woff woff2);
+@include font-face('icomoon', "../fonts/icomoon", 500, normal, eot woff woff2);
+@include font-face('icomoon', "../fonts/icomoon", 700, normal, eot woff woff2);
