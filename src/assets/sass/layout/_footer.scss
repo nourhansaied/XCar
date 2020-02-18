@@ -24,7 +24,7 @@ footer {
             font-size: 1.5rem;
             color: $primary-color;
             text-decoration: none;
-            @include transition (all 600ms ease-in-out);
+            @include transition (all, 600ms, ease-in-out);
 
             &:not(:last-child){
                 margin-#{$right}: 1.25rem;

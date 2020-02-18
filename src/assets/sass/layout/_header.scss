@@ -3,6 +3,12 @@
 // -----------------------------------------------------------------------------
 
 /*Navigation*/
+@import
+  'abstracts/ltr-vars',
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
 header {
     padding: 0.5rem 0;
     height: 5rem;
@@ -172,7 +178,7 @@ header {
                     a {
                         cursor: pointer;
                         color: $white-color;
-                        @include transition(color 600ms ease-in-out);
+                        @include transition(color, 600ms, ease-in-out);
 
                         &.menu-item {
                             .menu-item-text {

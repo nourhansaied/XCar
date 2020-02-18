@@ -12,7 +12,7 @@
     box-shadow: 0px 0.1875rem 0.375rem rgba($black-color, 0.16);
     font-size: 1rem;
     border: 1px solid $secondary-color;
-    @include transition(all 600ms ease-in-out);
+    @include transition(all, 600ms, ease-in-out);
 
     &:not([disabled]):hover,
     &:not([disabled]):focus,
