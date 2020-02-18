@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn-secondary,
+.btn-secondary:visited,
+.btn-secondary[disabled][disabled] {
+    text-transform: uppercase;
+    position: relative;
+    background: $secondary-color;
+    color: $white-color;
+    box-shadow: 0px 0.1875rem 0.375rem rgba($black-color, 0.16);
+    font-size: 1rem;
+    border: 1px solid $secondary-color;
+    @include transition(all 600ms ease-in-out);
+
+    &:not([disabled]):hover,
+    &:not([disabled]):focus,
+    &:not([disabled]):active {
+        background-color: transparent;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+        text-decoration: none;
+        box-shadow: 0px 0.1875rem 0.375rem rgba($black-color, 0.16);
+    }
+
+    &[disabled][disabled] {
+        cursor: not-allowed;
+    }
+}
+
+.btn-lg {
+    padding: 0.875rem 1.125rem;
+}
+
+.btn-md {
+    padding: 0.5625rem 1.25rem;
+}
+
+
+
+.btn-more {
+    position: absolute;
+    #{$left}: auto;
+    #{$right}: auto;
+    z-index: 2;
+    line-height: 1.27rem;
+    text-transform: capitalize;
+    a {
+        color: $black-color;
+        padding-#{$left}: 1rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            #{$left}: 0;
+            #{$right}: auto;
+            top: 50%;
+            border: solid $secondary-color;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: translateY(-50%) rotate(-45deg);
+            -webkit-transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}

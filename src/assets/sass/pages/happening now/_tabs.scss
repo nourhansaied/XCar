@@ -1,0 +1,41 @@
+#HappeningNowHome {
+
+    h3 {
+        margin: 0;
+    }
+
+    .nav-pills {
+        margin-bottom: 1.5rem;
+
+        .nav-item {
+            position: relative;
+            border-bottom: 1px solid $border-gary;
+            padding: 0 0.25rem;
+        }
+
+        .nav-link {
+            color: $demmed-color;
+            position: relative;
+            cursor: pointer;
+            font-size: 1.125rem;
+            padding: 0.5rem .625rem;
+
+            &.active {
+                color: $black-color;
+                background: none;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background: $secondary-color;
+                    bottom: -2px;
+                    #{$left}: 0;
+                    #{$right}: auto;
+                    z-index: 99;
+                }
+            }
+        }
+    }
+}

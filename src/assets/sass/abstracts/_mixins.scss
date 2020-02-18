@@ -1,0 +1,240 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+
+  @else {
+
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+
+// mdia query 
+@mixin mq($width, $type: min) {
+
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// keyframes
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+// placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+  ;
+
+  &:-moz-placeholder {
+    @content
+  }
+
+  ;
+
+  &::-moz-placeholder {
+    @content
+  }
+
+  ;
+
+  &:-ms-input-placeholder {
+    @content
+  }
+
+  ;
+}
+
+@mixin transition($property, $time, $animation) {
+  -webkit-transition: $property $time $animation;
+  -moz-transition: $property $time $animation;
+  -o-transition: $property $time $animation;
+  transition: $property $time $animation;
+}
+
+// prefixs
+/// Mixin to prefix several properties at once
+@mixin prefix($property, $value, $prefixes: ()) {
+  #{$property}: $value;
+
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+}
+
+@mixin clearfix {
+
+  &:after,
+  &:before {
+    display: table;
+    content: '';
+    clear: both;
+    zoom: 1;
+  }
+
+  zoom: 1;
+  clear: both;
+}
+
+@mixin abs-position ($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  #{$right}: 0;
+  #{$left}: 0;
+  margin: auto;
+}
+
+@mixin no-selection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+@mixin square($d) {
+  width: $d;
+  height: $d;
+
+}
+
+@mixin fw($w) {
+  @if $w=="l" {
+    font-weight: 300;
+  }
+
+  @else if $w=="r" {
+    font-weight: 400;
+  }
+
+  @else if $w=="smb" {
+    font-weight: 600;
+  }
+
+  @else if $w=="b" {
+    font-weight: 700;
+  }
+
+  @else if $w=="exb" {
+    font-weight: 800;
+  }
+}
+
+@mixin textoverflow() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+// font 
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff woff2 ttf svg) {
+  $src: null;
+  $extmods: (eot: "?", svg: "#"+ str-replace($name, " ", "_"));
+  $formats: (otf: "opentype", ttf: "truetype");
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+
+// scrollbar
+@mixin scrollbars($size, $foreground-color, $background-color) {
+
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    background-color: $background-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 $size rgba($foreground-color, 0.3);
+    background-color: $background-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $foreground-color;
+  }
+}

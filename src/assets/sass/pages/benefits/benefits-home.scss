@@ -1,0 +1,64 @@
+.offers {
+
+    .offer {
+        position: relative;
+        display: block;
+
+        h2 {
+            position: absolute;
+            color: $white-color;
+            padding: 2rem 5.375rem 2.5rem 1.625rem;
+            font-family: Max-SemiBold, sans-serif;
+            z-index: 99;
+            height: 100%;
+            margin: 0;
+            line-height: 2.125rem;
+        }
+
+        .bgImg {
+            position: relative;
+            height: 9.9375rem;    
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+            &:before {
+                content: '';
+                background: linear-gradient(241deg, rgba($black-color, 0), rgba($black-color, 1));
+                opacity: 0.64;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 9;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+
+    .slick-dots {
+        li {
+            @include square(1.125rem);
+            button {
+                border: 1px solid $secondary-color;
+                border-radius: 50%;
+                @include square(1.125rem);
+
+                &::before {
+                    content: '';
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background: $secondary-color;
+                }
+            }
+        }
+    }
+}

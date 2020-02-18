@@ -1,0 +1,132 @@
+.listing {
+  .card {
+    color: $black-color;
+    margin-bottom: 2.7rem;
+    height: 32.75rem;
+    position: relative;
+    @include transition(all 600ms ease-in-out);
+
+    .card-img {
+      height: 12.8rem;
+      border-top-#{$right}-radius: 0.5rem;
+      border-top-#{$left}-radius: 0.5rem;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        @include transition(all 600ms ease-in-out);
+      }
+    }
+
+    .card-body {
+      padding-bottom: 2rem;
+
+      *:not(.btn-more) {
+        position: relative;
+        z-index: 2;
+      }
+
+      &>span:not(.btn-more) {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid $primary-color;
+        border-radius: 0.5rem;
+        font-weight: bold;
+        display: inline-block;
+        @include transition(all 600ms ease-in-out);
+      }
+
+      .date {
+        background: $primary-color;
+        color: $white-color;
+        margin-#{$right}: 1rem;
+      }
+
+      .category {
+        background: $white-color;
+        color: $primary-color;
+      }
+    }
+
+    .card-title {
+      margin: 0.86rem 0 1.3rem;
+      font-size: 1.45rem;
+      line-height: 1.8rem;
+      font-family: Max-SemiBold, sans-serif;
+    }
+
+    .card-text {
+      line-height: 1.36rem;
+    }
+
+    .btn-more {
+      bottom: 1.5rem;
+
+      a {
+        @include transition(all 600ms ease-in-out);
+
+        &::before {
+          @include transition(all 600ms ease-in-out);
+        }
+      }
+
+      i {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      background: $primary-color;
+      height: 0.5rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      border-bottom-#{$right}-radius: 0.5rem;
+      border-bottom-#{$left}-radius: 0.5rem;
+      @include transition(all 600ms ease-in-out);
+    }
+
+    &:hover {
+      color: $white-color;
+
+      .card-img {
+        img {
+          transform: scale(1.1) rotate(1deg);
+        }
+      }
+
+      .card-body {
+        &>span:not(.btn-more) {
+          border: 1px solid $white-color;
+        }
+
+        .date {
+          background: $white-color;
+          color: $primary-color;
+        }
+
+        .category {
+          background: $primary-color;
+          color: $white-color;
+        }
+      }
+
+      .btn-more {
+        a {
+          color: $white-color;
+
+          &:before {
+            border-color: $white-color;
+          }
+        }
+      }
+
+      &::after {
+        height: calc(100% - 12.8rem);
+      }
+    }
+  }
+}

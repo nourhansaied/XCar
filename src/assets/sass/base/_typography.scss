@@ -1,0 +1,17 @@
+/**
+ * Basic typography style for copy text
+ */
+html, body {
+  font-size: 16px !important;
+  @include mq('laptop', 'max'){
+    font-size: 12px !important;
+  }
+  @include mq('xl-wide', 'max'){
+    font-size: 11px !important;
+  }
+}
+
+h3 {
+    font-family: Max-SemiBold, sans-serif;    
+    margin-bottom: .625rem;
+}

@@ -1,35 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
 footer {
-    background-color: $light-black;
-    padding: 4rem 0;
+    padding: 2.65rem 0 4.65rem;
 
-    .bold {
-        font-weight: bold;
-        text-transform: capitalize;
+    .logo,
+    .social {
+        padding-bottom: 0.8125rem;
     }
 
-    .action {
-        color: $white;
-        display: block;
-
-        &:hover {
-            color: white;
-        }
-    }
-
-    .menu-items {
-        a {
-            color: $secondary;
-            text-transform: capitalize;
-        }
+    .logo {
+        font-size: 1.75rem;
+        font-family: Max-SemiBold, sans-serif;
+        color: $primary-color;
     }
 
     .social {
-        a {
-            background: #161B11;
-            
-            &:hover{
-                background: $secondary;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .icon,.icon:focus {
+            font-size: 1.5rem;
+            color: $primary-color;
+            text-decoration: none;
+            @include transition (all 600ms ease-in-out);
+
+            &:not(:last-child){
+                margin-#{$right}: 1.25rem;
             }
+
+            &:hover, &:active{
+                color: $secondary-color;
+            }
+            
+        }
+    }
+
+    p.copyrights{
+        color: $text-gray;
+        margin: 0;
+        padding-top: 0.8125rem;
+        border-top: 1px solid #C7C7C7;
+    }
+
+    div.copyrights {
+        p{
+            display: none;
         }
     }
 }

@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+$primary-color: #2437ac;
+$secondary-color: #00b8ff;
+$green-color: #10B63E;
+$fushia-color: #F016B4;
+
+$dark-gray-color: #656565;
+$white-color: #fff;
+$black-color: #000;
+$border-gary:#E2E2E2;
+$demmed-color: #C7C7C7;
+$text-gray: #555;
+$percent-bg: #AAAAAA;
+$bar-bg: #EFEFEF;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
