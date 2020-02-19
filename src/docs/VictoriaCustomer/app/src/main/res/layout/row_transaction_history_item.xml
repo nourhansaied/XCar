@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTransactionDate"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_25_mar_2018"
+        android:padding="@dimen/dp_4"
+        android:paddingStart="@dimen/dp_16"
+        android:background="@color/offWhite1"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/contraintLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/textViewTransactionDate" >
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTransactionStatus"
+        style="@style/textview_title_semi_bold_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_add_amount_in_wallet"
+        />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTransactionId"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/dummy_transaction_id_1234567890"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTrasactionAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewTransactionStatus"
+        app:layout_constraintTop_toBottomOf="@id/textViewTransactionStatus" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTrasactionAmount"
+        style="@style/textview_title_semi_bold_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_sar_500"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTransactionId" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTransactionTime"
+        style="@style/textview_title_semi_bold_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/dummy_3_00_pm"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintTop_toBottomOf="@id/textViewTransactionId" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contraintLayout1" />
+</android.support.constraint.ConstraintLayout>

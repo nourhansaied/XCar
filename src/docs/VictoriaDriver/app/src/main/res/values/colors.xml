@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorAccent">#2B3050</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="text_blue">#1F2244</color>
+    <color name="text_blue_transparent">#af1f2244</color>
+    <color name="text_pink">#FF3B7F</color>
+    <color name="text_light_grey">#919191</color>
+    <color name="text_lightest_grey">#CECECE</color>
+    <color name="gray">#707070</color>
+    <color name="black">#000000</color>
+    <color name="green">#28AB66</color>
+    <color name="white">#ffffff</color>
+    <color name="white_transparent">#a5ffffff</color>
+    <color name="dark_pink">#C840E9</color>
+    <color name="hint_color">#FF3B7F</color>
+    <color name="yellow">#F1B235</color>
+    <color name="viewLine">#707070</color>
+    <color name="offWhite">#F9F9F9</color>
+    <color name="offWhite1">#F2F2F2</color>
+    <color name="offWhiteTransparent">#00f9f9f9</color>
+    <color name="orangeBold">#f67e1d</color>
+    <color name="whiteFullTransparnet">#20CCCCCC</color>
+    <color name="whiteFullTransparnetOneLevel">#40CCCCCC</color>
+    <color name="whiteFullTransparnetTwoLevel">#50CCCCCC</color>
+    <color name="whiteFullTransparnetThreeLevel">#60CCCCCC</color>
+    <color name="whiteFullTransparnetFourLevel">#99CCCCCC</color>
+    <color name="colorRed">#99FF0000</color>
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16">
+
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/radioButton"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableRight="@drawable/selector_radio_button"
+        android:padding="@dimen/dp_4"
+        android:paddingStart="@dimen/dp_8"
+        android:text="@string/cancel_reason_waited_too_long"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintTop_toBottomOf="@id/radioButton" />
+</android.support.constraint.ConstraintLayout>

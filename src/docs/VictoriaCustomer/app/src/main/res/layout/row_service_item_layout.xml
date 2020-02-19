@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dp_110"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:layout_gravity="center"
+    android:id="@+id/constraintLayoutRoot">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewCar"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/v_royal_1"
+        android:scaleType="centerInside"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/drawable_round_pink_strok"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewCarType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:drawablePadding="@dimen/dp_8"
+        android:drawableTint="@color/white"
+        android:ellipsize="end"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/dummy_sedan"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCar"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCar"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCar" />
+
+<!--        android:drawableEnd="@drawable/info"
+-->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/dummysar_10_15"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:layout_marginTop="@dimen/dp_4"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCarType"
+        app:layout_constraintStart_toStartOf="@+id/textViewCarType"
+        app:layout_constraintTop_toBottomOf="@id/textViewCarType" />
+
+</android.support.constraint.ConstraintLayout>

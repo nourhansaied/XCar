@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/dp_8">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/drawable_background_with_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewUserName"
+            style="@style/textview_title_bold_size_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:text="@string/dummy_hello_julia"
+            android:textAlignment="viewStart"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewClose"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:padding="@dimen/dp_4"
+            app:layout_constraintBottom_toTopOf="@+id/labelDriverArrived"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/close_white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/labelDriverArrived"
+            style="@style/textview_title_medium_blue_size_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="@string/label_driver_has_been_arrived_at_your_pickup_location"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="@+id/textViewUserName"
+            app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewDriverCarType"
+            style="@style/textview_title_medium_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:text="@string/dummy_honda_accord_sedan_abc2512"
+            android:textAlignment="viewStart"
+            android:textColor="@color/text_light_grey"
+            app:layout_constraintStart_toStartOf="@+id/labelDriverArrived"
+            app:layout_constraintTop_toBottomOf="@id/labelDriverArrived" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewCall"
+            style="@style/textview_title_semi_bold_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:drawableStart="@drawable/call"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_8"
+            android:text="@string/label_call"
+            android:textColor="@color/text_pink"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="@+id/textViewDriverCarType"
+            app:layout_constraintTop_toBottomOf="@id/textViewDriverCarType" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewMessage"
+            style="@style/textview_title_semi_bold_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:drawableStart="@drawable/msg"
+            android:drawablePadding="@dimen/dp_8"
+            android:padding="@dimen/dp_8"
+            android:text="@string/label_chat"
+            android:textColor="@color/text_pink"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDriverCarType"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textViewCall"
+            app:layout_constraintTop_toTopOf="@+id/textViewCall" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_4"
+    android:layout_marginEnd="@dimen/dp_4"
+    android:paddingBottom="@dimen/dp_16">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewRideDateTime"
+        style="@style/textview_title_semi_bold_blue_size_14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:text="@string/date_5_july_2018_3_00_pm"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTotalCost"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTotalCost"
+        style="@style/textview_title_semi_bold_blue_size_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_sar_30"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRideDateTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewPickup"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawableStart="@drawable/pickup_big"
+        android:drawablePadding="@dimen/dp_8"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="@string/dummy__3057_cost_avenue_greenbelt_md_20770"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewStatusCompleted"
+        app:layout_constraintStart_toStartOf="@+id/textViewRideDateTime"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRideDateTime" />
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_8"
+        android:background="@drawable/drawable_dot_line_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPickup" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewDropoff"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/dropoff_big"
+        android:drawablePadding="@dimen/dp_8"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="@string/dummy__3057_cost_avenue_greenbelt_md_20770"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPickup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewStatusCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalCost"
+        app:srcCompat="@drawable/completed" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewCancel"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/cancel_smallest"
+        android:text="@string/label_cancel"
+        android:textColor="@color/text_pink"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintTop_toBottomOf="@id/textViewDropoff" />
+</android.support.constraint.ConstraintLayout>

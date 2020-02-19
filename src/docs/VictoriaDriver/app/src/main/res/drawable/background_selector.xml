@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- not selected has transparent color -->
+    <item android:drawable="@drawable/white_background" android:state_pressed="false" android:state_selected="false"></item>
+    <item android:drawable="@drawable/pink_background" android:state_pressed="true">
+
+    </item>
+    <item android:drawable="@drawable/white_background" android:state_pressed="false" android:state_selected="true"></item>
+</selector>

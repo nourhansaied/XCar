@@ -41,7 +41,7 @@ yarn-error.log
 testem.log
 /typings
 /.vscode
-/docs
+/src/docs
 
 # System Files
 .DS_Store

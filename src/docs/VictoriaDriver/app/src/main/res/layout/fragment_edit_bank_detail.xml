@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_with_close" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView3"
+        style="@style/textview_title_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:text="@string/label_add_bank_info"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutCarMake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:textColorHint="@color/text_blue"
+        app:hintTextAppearance="@style/hint_text"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView3"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+        app:layout_constraintTop_toBottomOf="@id/appCompatTextView3">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextBankName"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusedByDefault="false"
+            android:hint="@string/bank_name"
+            android:inputType="textCapWords"
+            android:textAlignment="viewStart"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutCarModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textColorHint="@color/text_blue"
+        app:hintTextAppearance="@style/hint_text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutCarMake"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutCarMake"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCarMake">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextAccountHolderNumber"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusedByDefault="false"
+            android:hint="@string/acc_holder_no"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutColorCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textColorHint="@color/text_blue"
+        app:hintTextAppearance="@style/hint_text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutCarModel"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutCarModel"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCarModel">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextAccountNumber"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:ellipsize="end"
+            android:focusedByDefault="false"
+            android:hint="@string/account_no"
+            android:textAlignment="viewStart"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutCarType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="@color/text_blue"
+        android:visibility="gone"
+        app:hintTextAppearance="@style/hint_text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutColorCode"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutColorCode"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutColorCode">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextCarType"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/down_arrow_gray_vehicle"
+            android:editable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:focusedByDefault="false"
+            android:hint="@string/car_type"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:visibility="gone" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPlateNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textColorHint="@color/text_blue"
+        app:hintTextAppearance="@style/hint_text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutColorCode"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutColorCode"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCarType">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextRoutingNumber"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:ellipsize="end"
+            android:focusedByDefault="false"
+            android:hint="@string/routing_no"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="9"
+            android:textAlignment="viewStart"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonViewNext"
+        style="@style/button_pink_rounded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toTopOf="@+id/barrier"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPlateNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPlateNumber"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+
+</android.support.constraint.ConstraintLayout>

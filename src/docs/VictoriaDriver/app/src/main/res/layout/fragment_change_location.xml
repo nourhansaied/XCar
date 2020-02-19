@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutChangeLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_16"
+            android:padding="@dimen/dp_6"
+            android:tint="@color/text_blue"
+            app:layout_constraintBottom_toTopOf="@+id/imagViewDriverProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_15">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView13"
+                style="@style/textview_title_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/change_your_route"
+                android:textColor="@color/text_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imagViewDriverProfile"
+                app:layout_constraintTop_toBottomOf="@+id/imagViewDriverProfile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_20">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewDropoff"
+                    style="@style/AppTheme.EditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/dropoff_small"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:singleLine="true"
+                    android:text="@string/dummy_address_3"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPickup"
+                    app:layout_constraintStart_toStartOf="@+id/textViewPickup"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imageViewApply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:src="@drawable/btn_right" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutMapHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutChangeLocation"
+        android:background="@color/text_lightest_grey">
+
+    </FrameLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewRecenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:src="@drawable/re_centre" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewNightMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_toRightOf="@+id/imageViewRecenter"
+        android:src="@drawable/earth" />
+</RelativeLayout>

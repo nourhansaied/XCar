@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_8"
+        app:layout_constraintBottom_toTopOf="@id/radioButtonRideLater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@color/white"
+            android:clickable="true">
+
+            <FrameLayout
+                android:id="@+id/frameLayoutMapFare"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/text_light_grey"
+                app:layout_constraintBottom_toTopOf="@id/guideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageViewClose"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/dp_6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/close" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.3" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                style="@style/textview_title_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:gravity="start"
+                android:text="@string/label_fare_estimation"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewPickup"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:drawableStart="@drawable/pickup_pin"
+                android:drawablePadding="@dimen/dp_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewDropoff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:drawableStart="@drawable/dropoff_pin"
+                android:drawablePadding="@dimen/dp_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPickup"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@color/text_lightest_grey"
+                app:layout_constraintTop_toBottomOf="@id/textViewDropoff" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelCarType"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="start"
+                android:text="@string/label_car_type"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewCarType"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:gravity="end|center"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/labelCarType"
+                app:layout_constraintTop_toTopOf="@+id/labelCarType" />
+
+            <View
+                android:id="@+id/view1"
+                style="@style/view_dot_line"
+                android:layout_marginTop="@dimen/dp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCarType" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelEstimatedKm"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/label_estimated_km"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewEstimatedKm"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:gravity="end|center"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/labelEstimatedKm"
+                app:layout_constraintTop_toTopOf="@+id/labelEstimatedKm" />
+
+
+            <View
+                android:id="@+id/view2"
+                style="@style/view_dot_line"
+                android:layout_marginTop="@dimen/dp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelEstimatedKm" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelEstimatedDuration"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/label_estimated_duration"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewEstimatedDuration"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:gravity="end|center"
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/labelEstimatedDuration"
+                app:layout_constraintTop_toTopOf="@+id/labelEstimatedDuration" />
+
+            <View
+                android:id="@+id/view3"
+                style="@style/view_dot_line"
+                android:layout_marginTop="@dimen/dp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelEstimatedDuration" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelEstimatedCost"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_18"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="start"
+                android:text="@string/label_total_est_cost"
+                android:textAlignment="viewStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewEstimatedCost"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="end|center"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/text_pink"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/labelEstimatedCost"
+                app:layout_constraintTop_toTopOf="@+id/labelEstimatedCost" />
+
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/text_lightest_grey"
+                app:layout_constraintTop_toBottomOf="@id/labelEstimatedCost" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelPaymentMethod"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/label_set_payment_method"
+                android:textColor="@color/text_light_grey"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewPaymentMethod"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:drawableEnd="@drawable/spinner_arrow_down"
+                android:drawablePadding="@dimen/dp_15"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="end|center_vertical"
+                android:padding="@dimen/dp_4"
+                android:text="@string/dummy_cash"
+                app:layout_constraintBottom_toBottomOf="@+id/labelPaymentMethod"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/labelPaymentMethod" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/text_lightest_grey"
+                app:layout_constraintTop_toBottomOf="@id/textViewPaymentMethod" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelWhoRide"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/label_who_will_ride"
+                android:textColor="@color/text_light_grey"
+                android:textSize="@dimen/sp_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewWhoRide"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:drawableEnd="@drawable/spinner_arrow_down"
+                android:drawablePadding="@dimen/dp_15"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="end|center_vertical"
+                android:text="@string/dummy_me"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/labelWhoRide" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/text_lightest_grey"
+                app:layout_constraintTop_toBottomOf="@id/textViewWhoRide" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/textViewCustomerName"
+                style="@style/textview_title_medium_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_13"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:autoSizeMaxTextSize="@dimen/dp_8"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:hint="@string/label_customer_name"
+                android:imeOptions="actionNext"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:singleLine="true"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_blue"
+                android:textColorHint="@color/text_blue"
+                app:layout_constraintStart_toStartOf="@+id/labelPaymentMethod"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/text_lightest_grey"
+                app:layout_constraintTop_toBottomOf="@id/textViewCustomerName" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageViewFlag"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:scaleType="fitXY"
+
+                app:layout_constraintBottom_toBottomOf="@+id/textViewCountryCode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewCountryCode"
+                app:srcCompat="@drawable/flag_india" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp_8"
+                android:gravity="center"
+                android:hint="@string/dp_code"
+                android:text="@string/dummy_91"
+                android:textColor="@color/text_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextPhoneNumber"
+                app:layout_constraintStart_toEndOf="@+id/imageViewFlag"
+                app:layout_constraintTop_toTopOf="@+id/editTextPhoneNumber" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextPhoneNumber"
+                style="@style/AppTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="@string/hint_phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="@+id/textViewWhoRide"
+                app:layout_constraintStart_toEndOf="@+id/textViewCountryCode"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCustomerName" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/white"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/editTextPhoneNumber"
+                app:layout_constraintStart_toStartOf="@+id/imageViewFlag"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
+
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/text_lightest_grey"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/view8" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextPromocode"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/promocode"
+                android:drawablePadding="@dimen/dp_10"
+                android:ellipsize="end"
+                android:hint="@string/label_do_you_have_a_promocode"
+                android:imeOptions="actionDone"
+                android:lines="1"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:singleLine="true"
+                android:textAlignment="viewStart"
+                android:textColor="@color/text_blue"
+                android:textColorHint="@color/text_light_grey"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintEnd_toStartOf="@+id/buttonPromoApply"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view8"
+                tools:layout_editor_absoluteY="595dp" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonPromoApply"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/drawable_round_blue_button"
+                android:text="@string/label_apply"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextPromocode"
+                app:layout_constraintEnd_toEndOf="@+id/textViewWhoRide"
+                app:layout_constraintTop_toTopOf="@+id/editTextPromocode" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageRemove"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:padding="@dimen/dp_2"
+                android:tint="@color/colorPrimaryDark"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextPromocode"
+                app:layout_constraintEnd_toEndOf="@+id/textViewWhoRide"
+                app:layout_constraintTop_toTopOf="@+id/editTextPromocode"
+                app:srcCompat="@drawable/smallest_cancel" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/text_lightest_grey"
+                app:layout_constraintTop_toBottomOf="@id/buttonPromoApply" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="imageViewFlag,textViewCountryCode,view8,editTextPhoneNumber,textViewCustomerName,view9,textViewCustomerName,view11" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--  </RadioGroup>-->
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/radioButtonRideLater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="@drawable/drawable_round_pink_stroke_button"
+        android:button="@null"
+        android:checked="false"
+        android:ems="6"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="@string/button_ride_later"
+        android:textColor="@color/text_pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/radioButtonRideNow"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/radioButtonRideNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/drawable_round_pink_button"
+        android:button="@null"
+        android:checked="true"
+        android:ems="6"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_10"
+        android:text="@string/button_ride_now"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/radioButtonRideLater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonRideLater"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/radioButtonRideLater" />
+
+</android.support.constraint.ConstraintLayout>

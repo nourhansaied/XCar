@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+        <array name="weekDayTitle">
+            <item name="S">S</item>
+            <item name="M">M</item>
+            <item name="T">T</item>
+            <item name="W">W</item>
+            <item name="T">T</item>
+            <item name="F">F</item>
+            <item name="S">S</item>
+        </array>
+
+
+
+</resources>

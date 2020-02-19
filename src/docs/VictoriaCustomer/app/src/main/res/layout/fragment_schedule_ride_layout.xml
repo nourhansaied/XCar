@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_with_close" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView10"
+        style="@style/textview_title_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:text="@string/dummy_july_2018"
+        android:textColor="@color/text_pink"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2" />
+
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/materialCalender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView10"
+        app:mcv_arrowColor="@android:color/transparent"
+        app:mcv_calendarMode="week"
+        app:mcv_dateTextAppearance="@style/calenderMyAppointmentDay"
+        app:mcv_firstDayOfWeek="monday"
+        app:mcv_headerTextAppearance="@style/calenderHeaderMyAppointment"
+        app:mcv_selectionColor="@color/colorAccent"
+        app:mcv_showOtherDates="out_of_range"
+        app:mcv_tileHeight="@dimen/dp_36"
+        app:mcv_weekDayLabels="@array/weekDayTitle"
+        app:mcv_weekDayTextAppearance="@style/calenderMyAppointmentWeek" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCalender" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/view_dot_line"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCalender" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewSelectTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:drawableEnd="@drawable/watch"
+        android:hint="@string/label_select_time"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:alpha="0.5"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintTop_toBottomOf="@id/textViewSelectTime" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTotalEstiCost"
+        style="@style/textview_title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelEstimatedCost"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:text="@string/label_total_est_cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTotalEstiCost" />
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonSubmitRequest"
+        style="@style/button_pink_rounded"
+        android:ems="12"
+        android:text="@string/btn_submit_your_request"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelEstimatedCost"
+        app:layout_constraintVertical_bias="0.5" />
+
+</android.support.constraint.ConstraintLayout>

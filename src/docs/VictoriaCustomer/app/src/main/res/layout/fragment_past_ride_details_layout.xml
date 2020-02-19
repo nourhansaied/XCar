@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/toolbar_with_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewRideDateTime"
+        style="@style/textview_title_semi_bold_blue_size_14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include6" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewCircle"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRideStatus"
+        app:layout_constraintStart_toStartOf="@+id/textViewRideDateTime"
+        app:layout_constraintTop_toTopOf="@+id/textViewRideStatus"
+        app:srcCompat="@drawable/drawable_dot_yellow" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewRideStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_8"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:text="@string/status_pending"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCircle"
+        app:layout_constraintTop_toBottomOf="@id/textViewRideDateTime" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintStart_toStartOf="@+id/textViewRideDateTime"
+        app:layout_constraintTop_toBottomOf="@id/textViewRideStatus" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelRideInfo"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/label_ride_info"
+        android:textColor="@color/text_pink"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewPickup"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="8dp"
+        android:drawableStart="@drawable/pickup_big"
+        android:drawablePadding="@dimen/dp_8"
+        android:gravity="start"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/labelRideInfo"
+        app:layout_constraintTop_toBottomOf="@+id/labelRideInfo" />
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_7"
+        android:background="@drawable/drawable_dot_line_vertical"
+        app:layout_constraintStart_toStartOf="@+id/textViewPickup"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPickup" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewDropoff"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:drawableStart="@drawable/dropoff_big"
+        android:drawablePadding="@dimen/dp_8"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewEstimatedKm"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintStart_toStartOf="@+id/textViewDropoff"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDropoff" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView6"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewEstimatedKm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.070"
+        app:layout_constraintStart_toEndOf="@+id/textViewEstimatedKm"
+        app:layout_constraintTop_toTopOf="@+id/textViewEstimatedKm"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/drawable_dot_gray" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewEstimatedDuration"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+        app:layout_constraintTop_toTopOf="@+id/textViewEstimatedKm"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintStart_toStartOf="@+id/textViewEstimatedDuration"
+        app:layout_constraintTop_toBottomOf="@id/textViewEstimatedDuration" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelWhoRide"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_18"
+        android:text="@string/label_who_will_ride"
+        android:textColor="@color/text_pink"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelName"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/label_name"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintEnd_toStartOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="@+id/labelWhoRide"
+        app:layout_constraintTop_toBottomOf="@id/labelWhoRide" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewName"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="@+id/labelName"
+        app:layout_constraintTop_toBottomOf="@id/labelName" />
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelWhoRide" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelPhoneNumber"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_phone_number"
+        android:textColor="@color/text_light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/labelName" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewPhoneNumber"
+        style="@style/textview_title_regular_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/labelPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/labelPhoneNumber"
+        app:layout_constraintTop_toTopOf="@+id/textViewName" />
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@color/text_lightest_grey"
+        app:layout_constraintStart_toStartOf="@+id/textViewRideDateTime"
+        app:layout_constraintTop_toBottomOf="@id/view4" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/textViewCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view5"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/completed" />
+</android.support.constraint.ConstraintLayout>

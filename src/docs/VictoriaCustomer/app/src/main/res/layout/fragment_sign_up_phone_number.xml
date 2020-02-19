@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:clickable="true">
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewClose"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_8"
+        android:padding="@dimen/dp_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_back" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView3"
+        style="@style/textview_title_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="@string/label_your_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewClose"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewClose" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutCountryCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:textColorHint="@color/text_pink"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView3"
+        app:layout_constraintStart_toStartOf="@+id/appCompatTextView3"
+        app:layout_constraintTop_toBottomOf="@id/appCompatTextView3">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editCountryCode"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:hint="@string/hint_country_code"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:textColorHint="@color/text_blue"
+        app:hintTextAppearance="@style/hint_text"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutCountryCode"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutCountryCode"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCountryCode">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextPhoneNumber"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:imeOptions="actionDone"
+            android:focusedByDefault="false"
+            android:hint="@string/hint_phone_number"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:text="" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutPhoneNumber"
+        app:layout_constraintVertical_bias="0.35"
+        app:srcCompat="@drawable/btn_next" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

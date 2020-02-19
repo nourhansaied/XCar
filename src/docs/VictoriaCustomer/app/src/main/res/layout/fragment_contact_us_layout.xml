@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_with_close" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp_30"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/appCompatImageView"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_90"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/text_pink"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_16"
+                android:textColorHint="@color/text_blue"
+                app:hintTextAppearance="@style/hint_text"
+                app:layout_constraintTop_toBottomOf="@id/appCompatTextView">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editTextSubject"
+                    style="@style/AppTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:focusedByDefault="false"
+                    android:hint="@string/label_subject"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColorHint="@color/text_blue"
+                app:hintTextAppearance="@style/hint_text"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutSubject">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editTextEmail"
+                    style="@style/AppTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/mail"
+                    android:ellipsize="end"
+                    android:focusedByDefault="false"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextCommentBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@drawable/drawable_gray_stroke"
+                android:gravity="top"
+                android:hint="@string/hint_say_something"
+                android:lines="5"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:padding="@dimen/dp_8"
+                android:textColor="@color/text_blue"
+                android:textColorHint="@color/text_lightest_grey"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="@+id/textInputLayoutEmail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textInputLayoutEmail"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/labelUploadImage"
+                style="@style/textview_title_regular_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_upload_images"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_32"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewAddPhoto"
+                app:layout_constraintStart_toStartOf="@+id/editTextCommentBox"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCommentBox" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_8">
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageViewAddPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/addphoto"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/labelUploadImage" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleVieImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewAddPhoto"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCommentBox"
+                app:layout_constraintStart_toEndOf="@+id/imageViewAddPhoto"
+                app:layout_constraintTop_toTopOf="@+id/imageViewAddPhoto"
+                />
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonSend"
+                style="@style/button_pink_rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/btn_send"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editTextCommentBox"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/imageViewAddPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewAddPhoto" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

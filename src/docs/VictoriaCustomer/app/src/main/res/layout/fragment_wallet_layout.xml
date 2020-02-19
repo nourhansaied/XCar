@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/toolbar_with_menu" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/dot_bg"
+        android:layout_marginTop="@dimen/dp_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_200"
+        android:background="@drawable/drawable_round_pink"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view7">
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.351"
+            app:srcCompat="@drawable/walletwhite" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewWalletBalance"
+            style="@style/textview_title_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/dummy_sar_1000"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewWallet"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/imageViewWallet"
+            app:layout_constraintTop_toBottomOf="@id/imageViewWallet" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/label_wallet_balance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="@+id/textViewWalletBalance"
+            app:layout_constraintStart_toStartOf="@+id/textViewWalletBalance"
+            app:layout_constraintTop_toBottomOf="@id/textViewWalletBalance" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewAddAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/view7"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/addmoney" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView12"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/label_add_amount"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewAddAmount"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAddAmount"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAddAmount" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewAddAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewAddAmount"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView12"
+        app:srcCompat="@drawable/history" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView16"
+        style="@style/textview_title_medium_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/label_transaction_history"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewTransaction"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageViewTransaction"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTransaction" />
+</LinearLayout>

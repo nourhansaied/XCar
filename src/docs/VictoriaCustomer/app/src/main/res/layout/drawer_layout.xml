@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:translationY="-1080dp">
+
+    <!---->
+
+    <View
+        android:id="@+id/viewBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_110"
+        android:layout_marginBottom="@dimen/dp_120"
+        android:background="@drawable/slide_menu_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewClose"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:padding="@dimen/dp_6"
+        android:tint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/close_white" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginStart="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewUserName"
+        style="@style/textview_title_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProfile"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProfile" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewWalletAmount"
+        style="@style/textview_title_semi_bold_blue_size_14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:drawableStart="@drawable/wallet_pink"
+        android:drawablePadding="@dimen/dp_4"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/text_pink"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewProfile"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@id/textViewUserName"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserName" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewHome"
+        style="@style/Drawer.TextView"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/menu_home"
+        app:layout_constraintStart_toStartOf="@+id/imageViewProfile"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewWallet"
+        style="@style/Drawer.TextView"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/menu_wallet"
+        app:layout_constraintStart_toStartOf="@+id/textViewHome"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHome" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewMyRides"
+        style="@style/Drawer.TextView"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/menu_my_rides"
+        app:layout_constraintStart_toStartOf="@+id/textViewWallet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWallet" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewNotification"
+        style="@style/Drawer.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/menu_notification"
+        app:layout_constraintStart_toStartOf="@+id/textViewMyRides"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMyRides" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewNotificationCount"
+        style="@style/textview_title_medium_blue_size_14"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_8"
+        android:background="@drawable/drawable_round_pink"
+        android:gravity="center"
+        android:padding="@dimen/dp_2"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNotification"
+        app:layout_constraintStart_toEndOf="@+id/textViewNotification"
+        app:layout_constraintTop_toTopOf="@+id/textViewNotification" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewSettings"
+        style="@style/Drawer.TextView"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/menu_settings"
+        app:layout_constraintStart_toStartOf="@+id/textViewNotification"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNotification" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewLogout"
+        style="@style/Drawer.TextView"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/menu_logout"
+        app:layout_constraintStart_toStartOf="@+id/textViewSettings"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSettings" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewVersion"
+        style="@style/Drawer.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_6"
+        android:text="@string/version_1_0"
+        android:textColor="@color/text_pink"
+        app:layout_constraintStart_toStartOf="@+id/textViewSettings"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLogout" />
+
+
+    <View
+        android:id="@+id/viewBackGroundOnline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slide_menu_small"
+        android:visibility="gone" />
+</android.support.constraint.ConstraintLayout>
