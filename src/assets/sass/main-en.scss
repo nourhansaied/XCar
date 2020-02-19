@@ -8,8 +8,8 @@
   'abstracts/mixins';
 
 // 2. Vendors
-@import
-  'vendors/normalize';
+// @import
+//   'vendors/normalize';
 
 // 3. Themes
 @import
@@ -25,11 +25,6 @@
   'base/icons'; 
 
 // 5. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer',
-  'layout/user-control';
-
 // 6. Components 
 @import 
   'components/button',
