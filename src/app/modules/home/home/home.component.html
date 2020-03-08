@@ -4,18 +4,15 @@
       <h1>ride option</h1>
       <p>Leo perspiciatis? Exercitationem molestias habitant proin justo sem. Luctus.</p>
     </div>
-    <div class="row">
-      <div class="col-3">
-        <victoria-ride></victoria-ride>
-      </div>
-      <div class="col-3">
-        <victoria-ride></victoria-ride>
-      </div>
-      <div class="col-3">
-        <victoria-ride></victoria-ride>
-      </div>
-      <div class="col-3">
-        <victoria-ride></victoria-ride>
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="row" *ngIf="rideOptions">
+          <ng-template ngFor let-option [ngForOf]="rideOptions">
+              <div class="col-3" >
+                  <victoria-ride [name] = "option.title"  [title]="('rideOption.' + option.id + '.title') | translate" [desc]="('rideOption.' + option.id + '.description') | translate"></victoria-ride>
+                </div>
+          </ng-template>
+        </div>
       </div>
     </div>
   </div>

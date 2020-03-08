@@ -1,0 +1,20 @@
+{
+  "rideOption": {
+    "firstOption": {
+      "title": "Normal",
+      "description": "Porro nascetur nisl metus, gravida, maecenas? Integer, similique commodi, natus."
+    },
+    "secondOption": {
+      "title": "V-Rotal",
+      "description": "Sint interdum curae architecto ridiculus gravida distinctio! Montes, sem suscipit, ultrices aenean diamlorem eius esse quisque, tellus cubilia! Accusantium corporis."
+    },
+    "thirdOption": {
+      "title": "Groups",
+      "description": "Et eget? Placerat expedita condimentum pariatur ipsa pellentesque curae mauris."
+    },
+    "fourthOption": {
+      "title": "Air Port",
+      "description": "Dignissim pellentesque cillum nostra ratione, quae, totam mus? Netus irure aliquip repellendus tellus gravida eleifend ante, aliquam, ea adipisci volutpat."
+    }
+  }
+}
