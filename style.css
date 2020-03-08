@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?r3wrim');
+  src:  url('fonts/icomoon.eot?r3wrim#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?r3wrim') format('truetype'),
+    url('fonts/icomoon.woff?r3wrim') format('woff'),
+    url('fonts/icomoon.svg?r3wrim#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-smile .path1:before {
+  content: "\e923";
+  color: rgb(255, 202, 40);
+}
+.icon-smile .path2:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(109, 76, 65);
+}
+.icon-smile .path3:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(109, 76, 65);
+}
+.icon-smile .path4:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(109, 76, 65);
+}
+.icon-pinterest-p:before {
+  content: "\e922";
+}
+.icon-smile1:before {
+  content: "\e927";
+}
+.icon-behance:before {
+  content: "\e91e";
+}
+.icon-linkedin:before {
+  content: "\e91f";
+}
+.icon-twitter:before {
+  content: "\e920";
+}
+.icon-facebook:before {
+  content: "\e921";
+}
+.icon-brand4:before {
+  content: "\e915";
+  color: #63a0d1;
+}
+.icon-desgin:before {
+  content: "\e900";
+  color: #62a0d1;
+}
+.icon-facebook1 .path1:before {
+  content: "\e901";
+  color: rgb(214, 219, 229);
+}
+.icon-facebook1 .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(49, 74, 126);
+}
+.icon-facebook1 .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-google-plus .path1:before {
+  content: "\e904";
+  color: rgb(245, 216, 217);
+}
+.icon-google-plus .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(208, 87, 67);
+}
+.icon-google-plus .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-google-plus .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-host:before {
+  content: "\e908";
+  color: #62a0d1;
+}
+.icon-linkedin1 .path1:before {
+  content: "\e909";
+  color: rgb(204, 222, 230);
+}
+.icon-linkedin1 .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(0, 89, 131);
+}
+.icon-linkedin1 .path3:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-location:before {
+  content: "\e90c";
+  color: #cbcbcb;
+}
+.icon-mail:before {
+  content: "\e90d";
+  color: #cbcbcb;
+}
+.icon-media:before {
+  content: "\e90e";
+  color: #62a0d1;
+}
+.icon-mobile:before {
+  content: "\e90f";
+  color: #62a0d1;
+}
+.icon-phone:before {
+  content: "\e910";
+  color: #cbcbcb;
+}
+.icon-twitter1 .path1:before {
+  content: "\e911";
+  color: rgb(219, 235, 243);
+}
+.icon-twitter1 .path2:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(76, 156, 193);
+}
+.icon-twitter1 .path3:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-web:before {
+  content: "\e914";
+  color: #63a0d1;
+}
+.icon-behance1 .path1:before {
+  content: "\e916";
+  color: rgb(204, 226, 254);
+}
+.icon-behance1 .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(0, 110, 251);
+}
+.icon-behance1 .path3:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-behance1 .path4:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-behance1 .path5:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}
+.icon-pinterest .path1:before {
+  content: "\e91b";
+  color: rgb(238, 214, 212);
+}
+.icon-pinterest .path2:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(168, 52, 41);
+}
+.icon-pinterest .path3:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(241, 242, 242);
+}

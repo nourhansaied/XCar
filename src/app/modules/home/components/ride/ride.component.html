@@ -1,3 +1,13 @@
-<p>
-  ride works!
-</p>
+<div class="ride-card">
+  <div class="bgImg" [style.backgroundImage]="'url(../../../../../assets/images/R-options/'+ name +'.png)'"></div>
+  <h4 class="text-center title">{{title}}</h4>
+  <div class="desc">
+    <p>{{desc | trim:'115'}}</p>
+    <button class="btn btn-primary" (click)="open(rideOptions, name)">fair estimate <i
+        class="icon-arrow-left"></i></button>
+  </div>
+</div>
+
+<ng-template #rideOptions bsModal>
+  <victoria-modal [title]="title | translate"></victoria-modal>
+</ng-template>

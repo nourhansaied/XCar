@@ -2,16 +2,11 @@
  * Basic typography style for copy text
  */
 html, body {
-  font-size: 16px !important;
-  @include mq('laptop', 'max'){
-    font-size: 12px !important;
+  font-size: 11px;
+  @include mq('laptop', 'min'){
+    font-size: 12px;
   }
-  @include mq('xl-wide', 'max'){
-    font-size: 11px !important;
+  @include mq('xl-wide', 'min'){
+    font-size: 16px;
   }
-}
-
-h3 {
-    font-family: Max-SemiBold, sans-serif;    
-    margin-bottom: .625rem;
 }

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { SwitchLangService } from './core/services/switch-lang.service';
+import { SwitchLangService } from "./core/services/switch-lang.service";
 
 @Component({
   selector: "app-root",
