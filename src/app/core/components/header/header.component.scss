@@ -1,8 +1,46 @@
 @import '../../../../assets/sass/main-en';
 .victoria-header{
-    font-family: 'Pacifico-Regular';
+    background-color: $secondary-color;
+    font-family: 'Poppins-Medium';
+    color: $white-color;
     .menu-icon{
         width: 30px;
-        padding: $padding;
+        margin-left: 6rem;
+    }
+    .collapse {
+        margin-left: 6rem;
+        .navbar-nav{
+            margin-left: 5rem;
+        }
+    }
+    &.navbar-light {
+        .navbar-nav {
+                .nav-link{
+                    color: $white-color;
+                }
+            
+        }
+        i {
+            border: solid $white-color;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            margin-left: 0.4rem;
+            &.down {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+              }
+          }
+    }
+    .right-side{
+        margin-right: 5rem;
+        .lang{
+            padding: 0.65rem;
+            margin-right: 1rem;
+        }
+        .login{
+            padding: 0.6rem 1.5rem;
+            text-transform: capitalize;
+        } 
     }
 }
