@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 import { TranslateModule } from "@ngx-translate/core"
 import { PipeModule } from 'src/app/shared/pipes/pipe.module';
+import { AboutUsModule } from './home/components/about-us/about-us.module';
 
 @NgModule({
   declarations: [HomeComponent, RideComponent, ModalComponent],
@@ -17,7 +18,8 @@ import { PipeModule } from 'src/app/shared/pipes/pipe.module';
     HomeRoutingModule,
     TranslateModule,
     ModalModule.forRoot(),
-    PipeModule
+    PipeModule,
+    AboutUsModule
   ]
 })
 export class HomeModule { }

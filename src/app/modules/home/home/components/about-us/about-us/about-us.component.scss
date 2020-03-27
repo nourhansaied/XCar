@@ -1,0 +1,38 @@
+
+@import '../../../../../../../assets/sass/main.scss';
+.about-us{
+    padding: 11rem 0;
+    color: $white-color;
+    background-color: $primary-color ;
+    position: relative;
+    &.primary{
+        
+    }
+    // &.secondary{
+    //     background: $primary-color  url('.././../../../../../../assets/images/3.png');
+    //     background-repeat: no-repeat;
+    //     background-position: right;
+    // }
+    .media-center-bg{
+        background-image:   url('.././../../../../../../assets/images/2.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        position: absolute;
+        height: 100%;
+        width: 41.6875rem;
+        top: 0;
+        left: 0;
+        right: auto;
+    }
+}
+h2{
+    font-size: 3rem;
+    font-family: 'Poppins-Medium';
+}
+h4{
+    font-size: 34px;
+    font-family: 'Poppins-Medium';
+}
+p{
+    color: rgba($color: $white-color, $alpha: 0.6);
+}
