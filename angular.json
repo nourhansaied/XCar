@@ -28,7 +28,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/assets/sass/main.scss"
+              "src/assets/sass/main.scss",
+              "src/assets/sass/base/bootstrap-rtl.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true

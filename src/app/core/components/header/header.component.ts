@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-  isArabicLanguage: boolean = false;
+
+  openMenu:boolean = false;
 
   constructor(
     private _translate: TranslateService,
@@ -18,18 +19,21 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    if (this._translate.currentLang == "ar") this.isArabicLanguage = true;
-    else this.isArabicLanguage = false;
+
   }
 
-  changeLanguage(event, lang) {
-    if (lang != this._translate.currentLang) {
-      if (this._translate.currentLang == "en") {
-        this._switchLang.setCurrentLanguage("ar");
-      } else {
-        this._switchLang.setCurrentLanguage("en");
-      }
-      window.location.href = this.router.url;
+  toggleMenu(){
+    this.openMenu = !this.openMenu;
+  }
+  changeLanguage() {
+    let lang = this._switchLang.getCurrentLanguage();
+    if(lang == 'ar'){
+      this._switchLang.setCurrentLanguage('en');
+      this._translate.use('en')
+    }else{
+      this._switchLang.setCurrentLanguage('ar');
+      this._translate.use('ar')
     }
+
   }
 }
