@@ -6,9 +6,7 @@ import { Component,
   TemplateRef,
   Input
 } from "@angular/core";
-import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
 import { SharedService } from "../../services/shared.service";
-import { Constant } from "../../constant";
 
 @Component({
   selector: "victoria-modal",

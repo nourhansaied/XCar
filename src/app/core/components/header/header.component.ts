@@ -11,13 +11,16 @@ import { SharedService } from 'src/app/shared/services/shared.service';
 })
 export class HeaderComponent implements OnInit {
   isArabicLanguage: boolean = false;
+  modalTitle: string;
 
   constructor(
     private _translate: TranslateService,
     private _switchLang: SwitchLangService,
     private router: Router,
     private sharedSer: SharedService
-  ) {}
+  ) {
+    this._translate.get('login').subscribe(res => this.modalTitle = res)
+  }
 
   ngOnInit() {
     if (this._translate.currentLang == "ar") this.isArabicLanguage = true;
@@ -36,6 +39,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public open(template: TemplateRef<any>) {
-    this.sharedSer.openModal(template,'modal-lg ride-option-modal');
+    this.sharedSer.openModal(template,'modal-md ride-option-modal');
   }
 }
