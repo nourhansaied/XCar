@@ -1,0 +1,157 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-4 bordered-title">
+        <h3>Driver Registration </h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+    </div>
+
+    <form class="driver-form" [formGroup]="registerDriverForm" (ngSubmit)="onSubmit()">
+      <div class="first-step fake-popup" *ngIf="!showNextStep">
+        <h4 class="shifted-title">Driver information</h4>
+
+        <div class="row">
+          <div class="col-6">
+            <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+          </div>
+
+          <div class="col-6">
+            <input class="form-control" type="text" formControlName="nationalID" placeholder="National ID">
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="email" formControlName="email" placeholder="Email">
+          </div>
+
+          <div class="col-6">
+            <input class="form-control" type="password" formControlName="password" placeholder="Password">
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="password" formControlName="confirmPassword"
+              placeholder="Confirm Password">
+          </div>
+
+          <div class="w-50">
+            <div class="col-12 phone">
+              <input class="form-control prefix" type="text" placeholder="+699" readonly>
+              <input class="form-control phone-number" type="text" formControlName="phoneNumber"
+                placeholder="Phone Number">
+            </div>
+
+            <div class="col-12">
+              <select class="form-control" formControlName="gender" [value]="0">
+                <option value="0" disabled selected>select gender</option>
+                <option value="1">female</option>
+                <option value="2">male</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <select class="form-control" formControlName="status" [value]="0">
+              <option value="0" disabled selected>select status</option>
+              <option value="1">female</option>
+              <option value="2">male</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <select class="form-control" formControlName="loginStatus" [value]="0">
+              <option value="0" disabled selected>login Status</option>
+              <option value="1">female</option>
+              <option value="2">male</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <select class="form-control" formControlName="service" [value]="0">
+              <option value="0" disabled selected>Service</option>
+              <option value="1">female</option>
+              <option value="2">male</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <select class="form-control" formControlName="dirverStatus" [value]="0">
+              <option value="0" disabled selected>Select Driver Status</option>
+              <option value="1">female</option>
+              <option value="2">male</option>
+            </select>
+          </div>
+          <div class="w-50">
+            <div class="col-12">
+              <label class="lbl" for="">Select Profile Image</label>
+              <input class="" type="file" formControlName="profilePic">
+            </div>
+          </div>
+        </div>
+
+        <button type="button" (click)="nextStep()">Next</button>
+      </div>
+
+      <div class="next-step" *ngIf="showNextStep">
+        <div formGroupName="driverDocuments">
+          <h4 class="shifted-title">Driver Documents information</h4>
+          <div class="row">
+            <div class="col-12">
+              <div class="w-50">
+                <label class="lbl" for="">Driving License</label>
+                <input class="" type="file" formControlName="profilePic">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="w-50">
+                <label class="lbl" for="">registration Image</label>
+                <input class="" type="file" formControlName="profilePic">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="w-50">
+                <label class="lbl" for="">Car Front Image</label>
+                <input class="" type="file" formControlName="profilePic">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="w-50">
+                <label class="lbl" for="">Car Back Image</label>
+                <input class="" type="file" formControlName="profilePic">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="w-50">
+                <label class="lbl" for="">Document Status</label>
+                <input class="" type="file" formControlName="profilePic">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div formGroupName="driverBankAccount">
+          <h4 class="shifted-title">Driver Bank Account</h4>
+          <div class="row">
+            <div class="col-6">
+              <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+            </div>
+
+            <div class="col-6">
+              <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+            </div>
+
+            <div class="col-6">
+              <input class="form-control" type="text" formControlName="nationalID" placeholder="National ID">
+            </div>
+
+            <div class="col-6">
+              <input class="form-control" type="email" formControlName="email" placeholder="Email">
+            </div>
+          </div>
+
+          <button type="button" (click)="prevStep()">Previous</button>
+          <button type="button" [disabled]="!registerDriverForm.valid">Finish</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

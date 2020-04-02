@@ -1,0 +1,61 @@
+@import "../../../../assets/sass/main";
+
+.social-media-btns {
+  p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgba($color: $black-color, $alpha: 0.5);
+    margin-bottom: 2rem;
+  }
+  .btns-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 -2rem 3rem;
+
+    .btn {
+      width: 12.5rem;
+      color: $white-color;
+      font-size: 1.5rem;
+      margin: 0 2rem;
+
+      &.fb {
+        background-color: #3c5a98;
+      }
+
+      &.twt {
+        background-color: #1da1f2;
+      }
+
+      &.gm {
+        background-color: #e42e29;
+      }
+    }
+  }
+
+  .or {
+    text-transform: capitalize;
+    position: relative;
+    width: 30rem;
+    display: block;
+    margin: 0 auto 3rem;
+    text-align: center;
+
+    &::before,&::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1px;
+        background: #dadada;
+        width: 12.5rem;
+    }
+
+    &::before{
+        left: 0;
+    }
+    &::after{
+        right: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+<section class="customer-registeration">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 bordered-title">
+        <h3>Customer Registration </h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+    </div>
+
+    <div class="customer-form fake-popup">
+
+      <victoria-social-media></victoria-social-media>
+
+      <form [formGroup]="registerCustomerForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+          <div class="col-6">
+            <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+          </div>
+
+          <div class="col-6">
+            <input class="form-control" type="text" formControlName="nationalID" placeholder="National ID">
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="email" formControlName="email" placeholder="Email">
+          </div>
+
+          <div class="col-6">
+            <input class="form-control" type="password" formControlName="password" placeholder="Password">
+          </div>
+          <div class="col-6">
+            <input class="form-control" type="password" formControlName="confirmPassword"
+              placeholder="Confirm Password">
+          </div>
+
+          <div class="w-50">
+            <div class="col-12 phone">
+              <input class="form-control prefix" type="text" placeholder="+699" readonly>
+              <input class="form-control phone-number" type="text" formControlName="phoneNumber"
+                placeholder="Phone Number">
+            </div>
+
+            <div class="col-12">
+              <select class="form-control" formControlName="gender" [value]="0">
+                <option value="0" disabled selected>select gender</option>
+                <option value="1">female</option>
+                <option value="2">male</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <button type="button">Register</button>
+
+      </form>
+    </div>
+  </div>
+</section>

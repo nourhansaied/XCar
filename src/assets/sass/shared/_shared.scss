@@ -1,0 +1,20 @@
+.bordered-title {
+  h3 {
+    @extend %colored-border;
+  } 
+  p{
+      font-size: 1.5rem;
+      color: rgba($black-color, 0.65);
+  }
+}
+
+.shifted-title{
+    @extend %shifted-title;
+}
+
+.fake-popup {
+  width: 75%;
+  box-shadow: 0 0.25rem 0.5rem rgba($black-color, 0.2);
+  padding: 3rem;
+  background-color: $white-color;
+}
