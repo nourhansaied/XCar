@@ -9,5 +9,7 @@
 </div>
 
 <ng-template #rideOptions bsModal>
-  <victoria-modal [title]="title | translate"></victoria-modal>
+  <victoria-modal [title]="title | translate">
+    <victoria-ride-options-modal-content></victoria-ride-options-modal-content>
+  </victoria-modal>
 </ng-template>

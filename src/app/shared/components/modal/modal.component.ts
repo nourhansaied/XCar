@@ -1,5 +1,4 @@
-import {
-  Component,
+import { Component,
   OnInit,
   Output,
   EventEmitter,
@@ -17,22 +16,12 @@ import { Constant } from "../../constant";
   styleUrls: ["./modal.component.scss"]
 })
 export class ModalComponent implements OnInit {
-  selectedRide: string;
-  rideOptions: object;
-  @Input() title: string;
-  
+
+  @Input() modalTitle: string;
+
   constructor(private sharedSer: SharedService) {}
 
-  ngOnInit() {
-    this.rideOptions = Constant.rideOptions;
-    this.sharedSer
-      .getRideSelection()
-      .subscribe(option => (this.selectedRide = option));
-  }
-
-  public updateRideSelection(rideOption) {
-    this.sharedSer.setRideSelection(rideOption);
-  }
+  ngOnInit() {  }
 
   public close() {
     this.sharedSer.closeModal();

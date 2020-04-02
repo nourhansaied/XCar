@@ -12,6 +12,8 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { PipeModule } from './shared/pipes/pipe.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalComponent } from './shared/components/modal/modal.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,10 +32,12 @@ import { PipeModule } from './shared/pipes/pipe.module';
     CoreModule,
     SharedModule,
     HomeModule,
-    PipeModule
+    PipeModule,
+    ModalModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule {}
 
