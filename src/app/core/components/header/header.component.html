@@ -24,12 +24,11 @@
 
           </div>
         </li>
-       
       </ul>
      <div class="right-side">
         <button class="button button-primary lang " (click)="changeLanguage($event,'ar')"
         [ngClass]="{'active':isArabicLanguage}">AR</button>
-        <a class="button button-outline login" (click)="open(loginModal)">login</a>
+        <button class="button button-outline login" (click)="open(loginModal)">login</button>
      </div>
     </div>
   </nav>
