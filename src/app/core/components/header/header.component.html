@@ -42,12 +42,15 @@
 
           </div>
         </li>
-
       </ul>
-     <div class="right-side ml-auto">
+     <div class="right-side">
         <button class="button button-primary lang " (click)="changeLanguage()"
         >AR</button>
-        <button class="button button-outline login">login</button>
+        <button class="button button-outline login" (click)="open(loginModal)">login</button>
      </div>
     </div>
   </nav>
+
+  <ng-template #loginModal bsModal>
+    <victoria-modal>sa7ar</victoria-modal>
+  </ng-template>

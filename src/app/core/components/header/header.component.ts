@@ -1,7 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, TemplateRef } from "@angular/core";
 import { SwitchLangService } from "../../services/switch-lang.service";
 import { TranslateService } from "@ngx-translate/core";
 import { Router } from '@angular/router';
+import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
   selector: "app-header",
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private _translate: TranslateService,
     private _switchLang: SwitchLangService,
-    private router: Router
+    private router: Router,
+    private sharedSer: SharedService
   ) {}
 
   ngOnInit() {
@@ -35,5 +37,9 @@ export class HeaderComponent implements OnInit {
       this._translate.use('ar')
     }
 
+  }
+
+  public open(template: TemplateRef<any>) {
+    this.sharedSer.openModal(template,'modal-lg ride-option-modal');
   }
 }

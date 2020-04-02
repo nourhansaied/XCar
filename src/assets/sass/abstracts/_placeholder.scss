@@ -1,0 +1,43 @@
+%colored-border {
+  position: relative;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+  }
+
+  &::before {
+    width: 90%;
+    background: #dadada;
+  }
+
+  &::after {
+    width: 15%;
+    background: #f83a7d;
+  }
+}
+
+%shifted-title{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 10%;
+      background: #dadada;
+    }
+}

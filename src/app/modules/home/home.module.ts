@@ -9,9 +9,10 @@ import { ModalComponent } from 'src/app/shared/components/modal/modal.component'
 import { TranslateModule } from "@ngx-translate/core"
 import { PipeModule } from 'src/app/shared/pipes/pipe.module';
 import { AboutUsModule } from './components/about-us/about-us.module';
+import { RideOptionsModalContentComponent } from './components/ride/ride-options-modal-content/ride-options-modal-content.component';
 
 @NgModule({
-  declarations: [HomeComponent, RideComponent, ModalComponent],
+  declarations: [HomeComponent, RideComponent, RideOptionsModalContentComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -20,6 +21,7 @@ import { AboutUsModule } from './components/about-us/about-us.module';
     ModalModule.forRoot(),
     PipeModule,
     AboutUsModule
+    
   ]
 })
 export class HomeModule { }
