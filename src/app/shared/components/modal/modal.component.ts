@@ -16,6 +16,7 @@ import { SharedService } from "../../services/shared.service";
 export class ModalComponent implements OnInit {
 
   @Input() modalTitle: string;
+  @Input() staticPages: boolean;
 
   constructor(private sharedSer: SharedService) {}
 

@@ -1,22 +1,36 @@
-<!-- <button class="lang-flag" (click)="changeLanguage($event,'ar')"
-  [ngClass]="{'active':isArabicLanguage}">عربي</button>
 
-<button class="lang-flag" (click)="changeLanguage($event,'en')"
-  [ngClass]="{'active':!isArabicLanguage}">English</button> -->
-  <nav class="navbar navbar-expand-lg navbar-light  victoria-header">
-    <img src="../../../../assets/images/icons/menu.png" class="menu-icon" alt="">
-
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top  victoria-header">
+    <div class="left-side" [ngClass]="{'open' : openMenu}">
+      <i class="icon-menu menu" (click)="toggleMenu()"></i>
+    <div class="pages"  [ngClass]="{'openMenu' : openMenu}">
+      <ul class="navbar-nav mr-auto" [ngClass]="{'show-data' : openMenu}">
+        <li class="nav-item active" (click)="open(aboutUs)">
+          <a class="nav-link" >About US </a>
+        </li>
+        <li class="nav-item " (click)="open(help)">
+          <a class="nav-link"  >Help </a>
+        </li>
+        <li class="nav-item " (click)="open(news)">
+          <a class="nav-link"  >News </a>
+        </li>
+        <li class="nav-item " (click)="open(polices)">
+          <a class="nav-link"  >Policies </a>
+        </li>
+        <li class="nav-item " (click)="open(contactUs)">
+          <a class="nav-link"  >Contact Us </a>
+        </li>
+      </ul>
+    </div>
+    </div>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <a class="navbar-brand" href="#" ><img src="../../../../assets/images/logo.png" alt=""></a>
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav "  *ngIf="!openMenu">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home </a>
         </li>
-
-        <li class="nav-item ">
-
-          <a class="nav-link"  >
+        <li class="nav-item">
+          <a class="nav-link">
            Signup  <i class="arrow down"></i>        </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Customer</a>
@@ -25,9 +39,9 @@
           </div>
         </li>
       </ul>
-     <div class="right-side">
-        <button class="button button-primary lang " (click)="changeLanguage($event,'ar')"
-        [ngClass]="{'active':isArabicLanguage}">AR</button>
+     <div class="right-side ml-auto">
+        <button class="button button-primary lang " (click)="changeLanguage()"
+        >AR</button>
         <button class="button button-outline login" (click)="open(loginModal)">login</button>
      </div>
     </div>
@@ -36,5 +50,36 @@
   <ng-template #loginModal bsModal>
     <victoria-modal [modalTitle]="modalTitle">
       <victoria-login></victoria-login>
+    </victoria-modal>
+  </ng-template>
+
+  </ng-template>
+  <ng-template #aboutUs bsModal>
+    <victoria-modal [modalTitle]="aboutUsTitle" [staticPages] ="true">
+      <victoria-about-us></victoria-about-us>
+    </victoria-modal>
+  </ng-template>
+
+  <ng-template #help bsModal>
+    <victoria-modal [modalTitle]="helpTitle" [staticPages] ="true">
+      <victoria-help></victoria-help>
+    </victoria-modal>
+  </ng-template>
+
+  <ng-template #news bsModal>
+    <victoria-modal [modalTitle]="newsTitle" [staticPages] ="true">
+      <victoria-news></victoria-news>
+    </victoria-modal>
+  </ng-template>
+
+  <ng-template #polices bsModal>
+    <victoria-modal [modalTitle]="apoliciesTitle" [staticPages] ="true">
+      <victoria-policies></victoria-policies>
+    </victoria-modal>
+  </ng-template>
+  
+  <ng-template #contactUs bsModal>
+    <victoria-modal [modalTitle]="contactUsTitle" [staticPages] ="true">
+      <victoria-contact-us></victoria-contact-us>
     </victoria-modal>
   </ng-template>

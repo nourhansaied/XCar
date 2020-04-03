@@ -1,69 +1,36 @@
-  [class^="icon-"],
-  [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-
-  .icon-Birthday:before {
-    content: "\e90a";
-  }
-  .icon-Calendar:before {
-    content: "\e90b";
-  }
-  .icon-like:before {
-    content: "\e90c";
-  }
-  .icon-megaphone:before {
-    content: "\e90d";
-  }
-  .icon-star:before {
-    content: "\e90e";
-  }
-  .icon-download:before {
-    content: "\e909";
-  }
-  .icon-icn-navigation:before {
-    content: "\e908";
-  }
-  .icon-shortcuts:before {
-    content: "\e900";
-  }
-  .icon-facebook:before {
-    content: "\e903";
-  }
-  .icon-instagram:before {
-    content: "\e904";
-  }
-  .icon-linkedin:before {
-    content: "\e905";
-  }
-  .icon-twitter:before {
-    content: "\e906";
-  }
-  .icon-youtube:before {
-    content: "\e907";
-  }
-  .icon-Next:before {
-    content: "\e901";
-  }
-  .icon-Prev:before {
-    content: "\e902";
-  }
-  .icon-images:before {
-    content: "\e90f";
-  }
-  .icon-film:before {
-    content: "\e913";
-  }
-  
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}

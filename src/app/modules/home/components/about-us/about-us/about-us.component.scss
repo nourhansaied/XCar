@@ -1,0 +1,64 @@
+
+@import '../../../../../../assets/sass/main.scss';
+.about-us{
+    padding: 11rem 0;
+    color: $white-color;
+    background-color: $primary-color ;
+    position: relative;
+    &.primary{
+        background-color: $secondary-color;
+        .media-center-bg{
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            right: 0;
+            left: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &.secondary{
+        .media-center-bg{
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            left: 0;
+            right: auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .row{
+            flex-direction: row-reverse;
+        }
+    }
+    &.primary,&.secondary{
+        @media screen and (max-width: 767px){
+            padding-top: 0;
+        }
+        .media-center-bg{
+            @media screen and (max-width: 767px) {
+                position: relative;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+    
+}
+h2{
+    font-size: 3rem;
+    font-family: 'Poppins-Medium';
+}
+h4{
+    font-size: 34px;
+    font-family: 'Poppins-Medium';
+}
+p{
+    color: rgba($color: $white-color, $alpha: 0.6);
+}
