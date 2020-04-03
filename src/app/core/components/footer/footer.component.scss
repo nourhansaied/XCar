@@ -73,10 +73,25 @@ footer {
     background-color: #081a4b;
     color: rgba($color: $white-color, $alpha: 0.8);
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     p{margin: 0;}
     a{
         color: $white-color;
+    }
+
+    .google-apple-strore{
+        display: flex;
+        justify-content: flex-end;
+
+        a{
+            &:not(:last-child){
+                margin-right: 1rem;
+            }
+
+            img{
+                width: 8rem;
+            }
+        }
     }
 }
 }
