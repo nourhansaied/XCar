@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+@include font-face('icomoon', '~/assets/fonts/icomoon', 400, normal, eot woff woff2);
+
 @include font-face('Pacifico-Regular', '~/assets/fonts/Pacifico-Regular', 400, normal, eot woff woff2);
 @include font-face('Poppins-Regular', "~/assets/fonts/Poppins-Regular", 400, normal, eot woff woff2);
 @include font-face('Poppins-Medium', "~/assets/fonts/Poppins-Medium", 500, normal, eot woff woff2);

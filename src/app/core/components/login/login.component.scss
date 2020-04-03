@@ -1,0 +1,21 @@
+.login-form {
+  ::ng-deep {
+    .social-media-btns {
+      text-align: center;
+      .btns-group {
+        .btn {
+          min-width: 11rem;
+        }
+      }
+    }
+  }
+
+  form {
+    width: 50%;
+    margin: 0 auto;
+
+    button {
+      margin-bottom: 2rem;
+    }
+  }
+}

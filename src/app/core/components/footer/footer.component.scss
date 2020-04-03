@@ -1,0 +1,82 @@
+@import "../../../../assets/sass/main";
+
+footer {
+  .footer {
+    padding: 2rem;
+    background-color: $secondary-color;
+
+    h5 {
+      color: rgba($color: $white-color, $alpha: 0.9);
+      font-size: 1.65rem;
+      text-transform: capitalize;
+    }
+    p {
+      color: rgba($color: $white-color, $alpha: 0.6);
+    }
+    .social-media {
+      display: flex;
+      margin: 3rem 0 2rem;
+
+      a {
+        text-decoration: none;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+
+    .contact {
+      p {
+        color: $white-color;
+        display: flex;
+        align-items: center;
+        margin: 0 -1rem;
+
+        * {
+          padding: 0 1rem;
+        }
+
+        a {
+          color: rgba($color: $white-color, $alpha: 0.8);
+        }
+      }
+    }
+
+    .links {
+      a {
+        color: rgba($color: $white-color, $alpha: 0.6);
+        display: block;
+      }
+    }
+
+    .news {
+        .media{
+            margin-bottom: 1rem;
+      img {
+        max-width: 8rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    }
+  }
+  .copyright {
+    background-color: #081a4b;
+    color: rgba($color: $white-color, $alpha: 0.8);
+    text-align: center;
+    padding: 2rem;
+    p{margin: 0;}
+    a{
+        color: $white-color;
+    }
+}
+}

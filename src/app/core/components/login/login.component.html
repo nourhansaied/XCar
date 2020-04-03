@@ -1,2 +1,14 @@
-<victoria-social-media></victoria-social-media>
- 
+<div class="login-form">
+
+  <victoria-social-media></victoria-social-media>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <input class="form-control" type="email" formControlName="email" placeholder="Email">
+
+    <input class="form-control" type="password" formControlName="password" placeholder="Password">
+
+    <button type="button" class="button button-primary btn-block">Login</button>
+
+  </form>
+</div>

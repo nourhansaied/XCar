@@ -39,6 +39,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public open(template: TemplateRef<any>) {
-    this.sharedSer.openModal(template,'modal-md ride-option-modal');
+    this.sharedSer.openModal(template,'modal-md login-modal');
   }
 }

@@ -1,15 +1,26 @@
 .bordered-title {
   h3 {
     @extend %colored-border;
-  } 
-  p{
-      font-size: 1.5rem;
-      color: rgba($black-color, 0.65);
+  }
+  p {
+    font-size: 1.5rem;
+    color: rgba($black-color, 0.65);
   }
 }
 
-.shifted-title{
-    @extend %shifted-title;
+::ng-deep {
+  .modal-header {
+    border: 0;
+    @extend %colored-border;
+    
+    &::before {
+      width: 50%;
+    }
+  }
+}
+
+.shifted-title {
+  @extend %shifted-title;
 }
 
 .fake-popup {

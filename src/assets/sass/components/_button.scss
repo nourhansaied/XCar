@@ -1,21 +1,33 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-.button{
-    box-shadow: none;
-    outline: 0;
-    border: none;
+.button {
+  box-shadow: none;
+  outline: 0;
+  border: none;
+  padding: 0.625rem;
+  text-transform: capitalize;
 }
-.button-primary{
-    background-color: $primary-color;
-    color: $white-color;
+.button-primary {
+  background-color: $primary-color;
+  color: $white-color;
 }
-.button-secondary{
-    background-color: $secondary-color;
-    color: $white-color;
+.button-secondary {
+  background-color: $secondary-color;
+  color: $white-color;
 }
-.button-outline{
-    background-color: transparent;
-    color: $white-color;
-    border: 1px solid $white-color;
+.button-outline {
+  background-color: transparent;
+  color: $white-color;
+  border: 1px solid $white-color;
+}
+
+.button-sm {
+  width: 6.25rem;
+}
+.button-md {
+  width: 8.25rem;
+}
+.button-lg {
+  width: 9.25rem;
 }
