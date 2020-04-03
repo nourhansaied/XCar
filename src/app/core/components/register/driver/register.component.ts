@@ -28,7 +28,20 @@ export class RegisterDriverComponent implements OnInit {
       loginStatus: [''],
       service: [''], 
       dirverStatus: [''],
-      profilePic: ['']
+      profilePic: [''],
+      driverDocuments: this.fb.group({
+        drivingLicense: [''],
+        registrationImage: [''],
+        carFrontImage: [''],
+        carBackImage: [''],
+        documentStatus: ['']
+      }),
+      driverBankAccount: this.fb.group({
+        bankName: [''],
+        accountHolderName: [''],
+        accountNumber: [''],
+        routingNumber: [''],
+      }),
     });
 
   }

@@ -70,8 +70,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  public open(template: TemplateRef<any>) {
-    this.sharedSer.openModal(template, "modal-md login-modal");
-    this.sharedSer.openModal(template, "modal-lg ");
+  public open(template: TemplateRef<any>, classes?: string) {
+    this.sharedSer.openModal(template, `${classes}`);
   }
+
+  
 }

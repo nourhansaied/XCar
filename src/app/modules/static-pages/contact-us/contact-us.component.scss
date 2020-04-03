@@ -1,0 +1,52 @@
+@import "../../../../assets/sass/main";
+
+.contact {
+  p {
+    color: rgba($color: $black-color, $alpha: 0.6);
+    font-size: 18px;
+  }
+  .row-form {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 -1rem;
+
+    input {
+      width: 50%;
+      margin: 0px 1rem 2rem;
+    }
+
+    ::ng-deep{textarea
+        &.formcontrol{
+        height: 12rem ;
+    }
+}
+  }
+  .social {
+    h4 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
+
+    .social-media {
+      display: flex;
+      margin: 3rem 0 2rem;
+
+      a {
+        text-decoration: none;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: $black-color;
+        color: $white-color;
+      }
+    }
+  }
+}

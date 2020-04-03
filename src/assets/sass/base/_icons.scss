@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-phone:before {
   content: "\e942";
 }
@@ -33,4 +34,10 @@
 }
 .icon-twitter:before {
   content: "\ea96";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-lock:before {
+  content: "\e98f";
 }

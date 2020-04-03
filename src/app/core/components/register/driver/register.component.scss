@@ -1,9 +1,14 @@
 @import "../../../../../assets/sass/main";
-
+section{
+  padding: 3rem 0;
 .driver-form {
   .next-step{
       .lbl{
-          width: 44%;
+          width: 35%;
+      }
+      .button-reset{
+        margin-right: 1rem;
       }
   }
+}
 }

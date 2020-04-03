@@ -1,12 +1,23 @@
+@import "../../../../assets/sass/main";
+
 .login-form {
-  ::ng-deep {
-    .social-media-btns {
-      text-align: center;
-      .btns-group {
-        .btn {
-          min-width: 11rem;
-        }
+  p {
+    text-align: center;
+  }
+  .input-group {
+    border: 1px solid rgba($black-color, 0.3);
+    border-radius: 0.25rem;
+    .input-group-text {
+      background-color: transparent;
+      border: 0;
+      i {
+        font-size: 2rem;
       }
+    }
+
+    .form-control {
+      border: 0;
+      margin: 0;
     }
   }
 
@@ -16,6 +27,7 @@
 
     button {
       margin-bottom: 2rem;
+      font-size: 20px;
     }
   }
 }

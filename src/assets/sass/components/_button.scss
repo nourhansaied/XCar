@@ -7,20 +7,27 @@
   border: none;
   padding: 0.625rem;
   text-transform: capitalize;
-  border-radius: 5rem;
+  border-radius: .25rem;
 }
 .button-primary {
   background-color: $primary-color;
+  border: 1px solid $primary-color;
   color: $white-color;
 }
 .button-secondary {
   background-color: $secondary-color;
+  border: 1px solid $secondary-color;
   color: $white-color;
 }
 .button-outline {
   background-color: transparent;
   color: $white-color;
   border: 1px solid $white-color;
+}
+.button-reset {
+  background-color: transparent;
+  color: $black-color;
+  border: 1px solid #707070;
 }
 
 .button-sm {

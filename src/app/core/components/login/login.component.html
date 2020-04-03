@@ -3,11 +3,22 @@
   <victoria-social-media></victoria-social-media>
 
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="icon-user"></i>
+        </div>
+      </div>
     <input class="form-control" type="email" formControlName="email" placeholder="Email">
-
+</div>
+<div class="input-group mb-4">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <i class="icon-lock"></i>
+    </div>
+  </div>
     <input class="form-control" type="password" formControlName="password" placeholder="Password">
-
+</div>
     <button type="button" class="button button-primary btn-block">Login</button>
 
   </form>

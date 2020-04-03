@@ -15,12 +15,18 @@
     }
   }
 
+  textarea{
+    &.form-control{
+      height: 12rem;
+    }
+  }
+
   .phone {
     display: flex;
     align-items: center;
 
     .prefix {
-      width: 6rem;
+      width: 5rem;
       margin-right: 1rem;
     }
   }

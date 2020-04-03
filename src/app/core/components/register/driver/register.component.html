@@ -7,8 +7,8 @@
       </div>
     </div>
 
-    <form class="driver-form" [formGroup]="registerDriverForm" (ngSubmit)="onSubmit()">
-      <div class="first-step fake-popup" *ngIf="!showNextStep">
+    <form class="driver-form  fake-popup" [formGroup]="registerDriverForm" (ngSubmit)="onSubmit()">
+      <div class="first-step" *ngIf="!showNextStep">
         <h4 class="shifted-title">Driver information</h4>
 
         <div class="row">
@@ -88,7 +88,7 @@
           </div>
         </div>
 
-        <button type="button" (click)="nextStep()">Next</button>
+        <button type="button" class="button button-primary button-lg" (click)="nextStep()">Next</button>
       </div>
 
       <div class="next-step" *ngIf="showNextStep">
@@ -98,31 +98,31 @@
             <div class="col-12">
               <div class="w-50">
                 <label class="lbl" for="">Driving License</label>
-                <input class="" type="file" formControlName="profilePic">
+                <input class="" type="file" formControlName="drivingLicense">
               </div>
             </div>
             <div class="col-12">
               <div class="w-50">
                 <label class="lbl" for="">registration Image</label>
-                <input class="" type="file" formControlName="profilePic">
+                <input class="" type="file" formControlName="registrationImage">
               </div>
             </div>
             <div class="col-12">
               <div class="w-50">
                 <label class="lbl" for="">Car Front Image</label>
-                <input class="" type="file" formControlName="profilePic">
+                <input class="" type="file" formControlName="carFrontImage">
               </div>
             </div>
             <div class="col-12">
               <div class="w-50">
                 <label class="lbl" for="">Car Back Image</label>
-                <input class="" type="file" formControlName="profilePic">
+                <input class="" type="file" formControlName="carBackImage">
               </div>
             </div>
             <div class="col-12">
               <div class="w-50">
                 <label class="lbl" for="">Document Status</label>
-                <input class="" type="file" formControlName="profilePic">
+                <input class="" type="file" formControlName="documentStatus">
               </div>
             </div>
           </div>
@@ -132,23 +132,23 @@
           <h4 class="shifted-title">Driver Bank Account</h4>
           <div class="row">
             <div class="col-6">
-              <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+              <input class="form-control" type="text" formControlName="bankName" placeholder="Bank Name">
             </div>
 
             <div class="col-6">
-              <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+              <input class="form-control" type="text" formControlName="accountHolderName" placeholder="Account Holder Name">
             </div>
 
             <div class="col-6">
-              <input class="form-control" type="text" formControlName="nationalID" placeholder="National ID">
+              <input class="form-control" type="text" formControlName="accountNumber" placeholder="Account Number">
             </div>
 
             <div class="col-6">
-              <input class="form-control" type="email" formControlName="email" placeholder="Email">
+              <input class="form-control" type="text" formControlName="routingNumber" placeholder="Routing Number">
             </div>
           </div>
 
-          <button type="button" class="button button-outline button-lg" (click)="prevStep()">Previous</button>
+          <button type="button" class="button button-reset button-lg" (click)="prevStep()">Previous</button>
           <button type="button" class="button button-primary button-lg" [disabled]="!registerDriverForm.valid">Finish</button>
         </div>
       </div>
