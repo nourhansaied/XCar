@@ -89,6 +89,14 @@
                     opacity: 1;
                     transition: all 1s ease-in-out ;
                     transition-delay: 1s;
+                    cursor: pointer;
+                    
+                    a{
+                        &:hover{
+                            color: $secondary-color;
+                            text-decoration: none;
+                        } 
+                    }
                    }
                 }
             }

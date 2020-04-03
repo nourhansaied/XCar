@@ -18,6 +18,7 @@ import { Constant } from "../../constant";
 export class ModalComponent implements OnInit {
 
   @Input() modalTitle: string;
+  @Input() staticPages: boolean;
 
   constructor(private sharedSer: SharedService) {}
 

@@ -98,6 +98,17 @@
           }
         }
       }
+      &.static{
+        padding: 1rem 5rem 1rem 1rem;;
+      }
     }
   }
+}
+.modal-header {
+  h3{
+    width: 40%;
+  }
+}
+.static{
+  padding: 2rem;
 }

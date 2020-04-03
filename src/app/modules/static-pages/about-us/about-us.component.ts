@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'victoria-about-us',
@@ -6,9 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
-  @Input() theme;
-  @Input() title;
-  @Input() description;
+
   constructor() { }
 
   ngOnInit() {

@@ -1,10 +1,12 @@
-<div class="modal-header">
-  <h4 class="modal-title pull-left">{{modalTitle}}</h4>
-  <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-  <ng-content></ng-content>
+<div  [ngClass]="{'static' : staticPages}">
+  <div class="modal-header bordered-title">
+    <h3 class="modal-title pull-left">{{modalTitle}}</h3>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" [ngClass]="{'static' : staticPages}">
+    <ng-content></ng-content>
+  </div>
 </div>
 

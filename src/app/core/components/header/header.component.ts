@@ -12,13 +12,35 @@ import { SharedService } from 'src/app/shared/services/shared.service';
 export class HeaderComponent implements OnInit {
 
   openMenu:boolean = false;
-
+  subscriptionData: object;
+  aboutUsTitle:string;
+  contactUsTitle:string;
+  apoliciesTitle:string;
+  newsTitle:string;
+  helpTitle:string;
   constructor(
     private _translate: TranslateService,
     private _switchLang: SwitchLangService,
     private router: Router,
     private sharedSer: SharedService
-  ) {}
+  ) {
+    this.subscriptionData = {}
+   this.subscriptionData['about-us'] =  this._translate.get('about-us').subscribe(res => {
+      this.aboutUsTitle = res;
+    })
+    this.subscriptionData['help'] =  this._translate.get('help').subscribe(res => {
+      this.helpTitle = res;
+    })
+    this.subscriptionData['news'] =  this._translate.get('news').subscribe(res => {
+      this.newsTitle = res;
+    })
+    this.subscriptionData['polices'] =  this._translate.get('polices').subscribe(res => {
+      this.apoliciesTitle = res;
+    })
+    this.subscriptionData['contactUs'] =  this._translate.get('contactUs').subscribe(res => {
+      this.contactUsTitle = res;
+    })
+  }
 
   ngOnInit() {
 
@@ -40,6 +62,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public open(template: TemplateRef<any>) {
-    this.sharedSer.openModal(template,'modal-lg ride-option-modal');
+    this.sharedSer.openModal(template,'modal-lg ');
   }
 }
