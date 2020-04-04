@@ -17,7 +17,7 @@ export class RideComponent implements OnInit {
   ngOnInit() {}
 
   public open(template: TemplateRef<any>, rideOption) {
-    this.sharedSer.openModal(template,'modal-lg ride-option-modal');
+    this.sharedSer.openModal(template,'modal-xl ride-option-modal');
     this.sharedSer.setRideSelection(rideOption);
   }
 
