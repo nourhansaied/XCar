@@ -1,7 +1,7 @@
 $circle-color: #e9eaea !default;
 $circle-number-color: #000000 !default;
 $circle-display-text-color: #333333 !default;
-$circle-color-active: #da291c !default;
+
 $circle-number-color-active: #ffffff !default;
 $circle-display-text-color-active: #da291c !default;
 $circle-connecting-line-color: #e9eaea !default;
@@ -11,6 +11,7 @@ $step-wizard-circle-radius: 1.8rem !default;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
 }
 
 .step-block {
@@ -35,23 +36,23 @@ $step-wizard-circle-radius: 1.8rem !default;
   border-radius: 50%;
   border: $step-wizard-circle-radius/15 solid $circle-color;
   &.active {
-    background-color: $circle-color-active;
+    background-color: #f9f210;
     color: $circle-number-color-active;
-    border-color: $circle-color-active;
+    border-color: #f9f210;
     & + .step-text {
-      color: $circle-color-active;
+      color: #f9f210;
     }
     & ~ .step-rail::before {
-      background: $circle-color-active;
+      background: #f9f210;
     }
   }
   &.done {
     background-color: $circle-number-color-active;
-    color: $circle-color-active;
-    border-color: $circle-color-active;
+    color: #f9f210;
+    border-color: #f9f210;
     & ~ .step-rail::before,
     & ~ .step-rail::after {
-      background: $circle-color-active;
+      background: #f9f210;
     }
   }
 }
@@ -100,4 +101,11 @@ $step-wizard-circle-radius: 1.8rem !default;
     z-index: 2;
     background-image: url("../../../../assets/images/overlay.svg");
   }
+}
+.content {
+  background-color: black;
+  color: white;
+  position: relative;
+  z-index: 8;
+  text-align: center;
 }
