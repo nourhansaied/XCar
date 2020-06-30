@@ -18,10 +18,14 @@ const routes: Routes = [
     path: "car",
     loadChildren: "./modules/car/car.module#CarModule",
   },
+  {
+    path: "login",
+    loadChildren: "./core/auth/login/login.module#LoginModule",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

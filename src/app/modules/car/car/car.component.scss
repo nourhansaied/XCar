@@ -86,26 +86,3 @@ $step-wizard-circle-radius: 1.8rem !default;
   color: $circle-display-text-color;
   font-size: $step-wizard-circle-radius * 0.5;
 }
-#car {
-  background: #000000 url("../../../../assets/images/carbg.png");
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-    background-image: url("../../../../assets/images/overlay.svg");
-  }
-}
-.content {
-  background-color: black;
-  color: white;
-  position: relative;
-  z-index: 8;
-  text-align: center;
-}

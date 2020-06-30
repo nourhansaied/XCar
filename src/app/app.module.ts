@@ -14,11 +14,12 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { PipeModule } from './shared/pipes/pipe.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ModalComponent } from './shared/components/modal/modal.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -39,7 +40,7 @@ import { ModalComponent } from './shared/components/modal/modal.component';
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent]
 })
-export class AppModule {}
+export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
