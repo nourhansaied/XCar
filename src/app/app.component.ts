@@ -8,34 +8,34 @@ import { SwitchLangService } from "./core/services/switch-lang.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = "VictoriaWebApp";
+  title = "XCar";
   arabicLang: boolean = false;
-  
+
   constructor(
     private _translate: TranslateService,
     private _switchLang: SwitchLangService,
     private renderer: Renderer,
   ) {
-    this._translate.setDefaultLang("en");
+    this._translate.setDefaultLang("ar");
     let targetClass: boolean;
     let targetDir;
     this._translate.use(this._switchLang.getCurrentLanguage());
-    
+
     if (this._switchLang.getCurrentLanguage() == "ar") {
       this.arabicLang = true;
       targetClass = true;
-        targetDir = 'rtl';
+      targetDir = 'rtl';
     } else {
       this.arabicLang = false;
       targetDir = 'ltr';
       targetClass = false;
     }
     this.renderer.setElementClass(document.body, 'rtl', targetClass);
-      this.renderer.setElementAttribute(document.body, 'dir', targetDir);
-      this.renderer.setElementAttribute(document.body, 'id', targetDir);
+    this.renderer.setElementAttribute(document.body, 'dir', targetDir);
+    this.renderer.setElementAttribute(document.body, 'id', targetDir);
   }
 
   ngOnInit() {
-    this._translate.setDefaultLang("en");
+    this._translate.setDefaultLang("ar");
   }
 }

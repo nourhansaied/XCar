@@ -6,28 +6,28 @@ import { Router } from '@angular/router';
 export class SwitchLangService {
 
   SelectedLanguageKEY = 'SelectedLanguage';
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
 
   setCurrentLanguage(language) {
     localStorage.setItem(this.SelectedLanguageKEY, language);
     let targetClass: boolean;
     let targetDir;
-    
+
     if (language == "ar") {
       targetClass = true;
-        targetDir = 'rtl';
+      targetDir = 'rtl';
     } else {
       targetDir = 'ltr';
       targetClass = false;
     }
-    document.getElementsByTagName('body')[0].setAttribute('dir',targetDir)
-    document.getElementsByTagName('body')[0].setAttribute('id',targetDir)
+    document.getElementsByTagName('body')[0].setAttribute('dir', targetDir)
+    document.getElementsByTagName('body')[0].setAttribute('id', targetDir)
   }
 
 
-  public getCurrentLanguage():string {
+  public getCurrentLanguage(): string {
     let selectedLanguage = window.localStorage.getItem(this.SelectedLanguageKEY);
-    if(!selectedLanguage) return "en";
+    if (!selectedLanguage) return "ar";
     return selectedLanguage;
   }
 }

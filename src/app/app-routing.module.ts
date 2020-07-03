@@ -3,16 +3,6 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./modules/home/home/home.component";
 
 const routes: Routes = [
-  // {
-  //   path: "",
-  //   component: HomeComponent,
-  //   children: [
-  //     // { path: "", loadChildren: "./modules/home/home.module#HomeModule" },
-  //     { path: "driver", loadChildren: "./core/components/driver/driver.module#DriverModule" },
-
-  //   ]
-  // },
-
   { path: "", component: HomeComponent },
   {
     path: "car",
@@ -22,6 +12,14 @@ const routes: Routes = [
     path: "login",
     loadChildren: "./core/auth/login/login.module#LoginModule",
   },
+  {
+    path: "signup",
+    loadChildren: "./core/auth/signup/signup.module#SignupModule",
+  },
+  {
+    path: "me",
+    loadChildren: "./modules/profile/profile.module#ProfileModule",
+  }
 ];
 
 @NgModule({

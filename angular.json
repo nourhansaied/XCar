@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "VictoriaWebApp": {
+    "XCar": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "victoria",
+      "prefix": "XCar",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/VictoriaWebApp",
+            "outputPath": "dist/XCar",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,10 +36,12 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -49,29 +51,31 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "VictoriaWebApp:build"
+            "browserTarget": "XCar:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "VictoriaWebApp:build:production"
+              "browserTarget": "XCar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VictoriaWebApp:build"
+            "browserTarget": "XCar:build"
           }
         },
         "test": {
@@ -105,7 +109,7 @@
         }
       }
     },
-    "VictoriaWebApp-e2e": {
+    "XCar-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -114,11 +118,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "VictoriaWebApp:serve"
+            "devServerTarget": "XCar:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "VictoriaWebApp:serve:production"
+              "devServerTarget": "XCar:serve:production"
             }
           }
         },
@@ -134,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "VictoriaWebApp"
+  "defaultProject": "XCar"
 }

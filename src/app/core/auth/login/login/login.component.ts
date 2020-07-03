@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { baseURL, Endpoint } from 'src/app/shared/enums';
+import { baseURL, Endpoint } from 'src/app/enums';
 import { ApiService } from 'src/app/shared/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'victoria-login',
@@ -11,7 +12,7 @@ import { ApiService } from 'src/app/shared/services/api.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   basURL = baseURL.baseURL
-  constructor(private _ApiService: ApiService) {
+  constructor(private _ApiService: ApiService, private router: Router) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required])
@@ -32,7 +33,7 @@ export class LoginComponent implements OnInit {
         body
       }).subscribe(
         res => {
-          console.log(res)
+          this.router.navigate(['/me'])
         },
         err => {
           console.log(err)

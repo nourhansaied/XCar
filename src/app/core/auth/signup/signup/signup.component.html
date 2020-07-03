@@ -1,0 +1,48 @@
+<section id="car">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 m-auto">
+        <div class="content">
+          <h2>حساب جديد</h2>
+          <form class="text-left p-5" [formGroup]="signupForm">
+            <div class="form-group">
+              <label>الاسم</label>
+              <input autocomplete="off" type="text" class="form-control" formControlName="name" placeholder="أدخل أسمك">
+            </div>
+
+            <div class="form-group">
+              <label>الاميل</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="أدخل بريدك الإلكتروني">
+            </div>
+
+            <div class="form-group">
+              <label>الموبايل</label>
+              <input type="tel" autocomplete="tel" class="form-control" formControlName="mobile"
+                placeholder="أدخل هاتفك المحمول">
+            </div>
+            <div class="form-group" *ngIf="governments">
+              <label>المحافظة</label>
+              <ng-select [items]="governments" bindLabel="name" bindValue="id" placeholder="Select your government"
+                clearAllText="Clear" formControlName="governorateId">
+              </ng-select>
+            </div>
+            <div class="form-group">
+              <label>كلمة السر</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="ادخل كلمة السر">
+            </div>
+            <div class="form-group">
+              <label> تأكيد كلمة السر</label>
+              <input type="password" class="form-control" formControlName="confirmPassword"
+                placeholder="ادخل كلمة السر">
+              <div *ngIf="f.confirmPassword.errors && f.confirmPassword.errors.mustMatch">Passwords must match</div>
+
+            </div>
+
+            <button class="btn btn-primary" (click)="onSubmit(signupForm)">تسجيل</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
       path: '',
       component: LoginComponent
     }]),
+    RouterModule
   ]
 })
 export class LoginModule { }

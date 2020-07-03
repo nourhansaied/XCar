@@ -1,4 +1,6 @@
+
 @import "../../../../../assets/sass/themes/default";
+
 #car {
   background: #000000 url("../../../../../assets/images/carbg.png");
   height: 100%;
@@ -46,42 +48,6 @@
         &:last-child {
           margin-bottom: 0;
         }
-      }
-    }
-
-    .other__login {
-      .btn__action {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .btn {
-          line-height: 2px;
-          display: block;
-          height: 40px;
-          width: 100%;
-          border-radius: 2px;
-        }
-      }
-      .facebook {
-        background-color: #3c5a98;
-        margin-bottom: 20px;
-        color: $white-color;
-      }
-      .google {
-        background-color: $white-color;
-      }
-      p {
-        &:first-child {
-          color: #585858;
-          font-size: 14px;
-          margin-bottom: 0;
-        }
-        &.sign__up{
-           a{
-            color: $white-color;
-           }
-          }
-        
       }
     }
   }

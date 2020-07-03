@@ -2,30 +2,31 @@
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
-      <div class="col-6 m-auto">
+      <div class="col-12 col-md-6 m-auto">
         <div class="content">
           <h2>تسجيل الدخول لحسابك</h2>
           <form class="text-left p-5" [formGroup]="loginForm">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+              <label for="exampleInputEmail1">عنوان البريد الالكترونى </label>
               <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                aria-describedby="emailHelp" placeholder="Enter email">
+                aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
             </div>
 
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1"
-                placeholder="Password">
+              <label>كلمه السر</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="ادخل كلمه السر">
             </div>
             <p>نسيت كلمة المرور؟</p>
-            <button class="btn btn-primary" (click)="onSubmit(loginForm)">Submit</button>
+            <button class="btn btn-primary" (click)="onSubmit(loginForm)">الدخول</button>
           </form>
           <div class="other__login px-5">
             <p>ليس لديك حساب؟</p>
-            <p class="mb-5">
-              <u>
-                انشاء حساب جديد
-              </u>
+            <p class="mb-5 sign__up">
+              <a [routerLink]="['/signup']">
+                <u>
+                  انشاء حساب جديد
+                </u>
+              </a>
             </p>
             <div class="btn__action">
               <button class="btn facebook">الدخول باستخدام فيس بوك</button>
