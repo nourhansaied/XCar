@@ -1,17 +1,15 @@
-$circle-color: #e9eaea !default;
-$circle-number-color: #000000 !default;
-$circle-display-text-color: #333333 !default;
 
-$circle-number-color-active: #ffffff !default;
-$circle-display-text-color-active: #da291c !default;
-$circle-connecting-line-color: #e9eaea !default;
-$step-wizard-circle-radius: 1.8rem !default;
+
+@import "../../../../assets/sass/themes/default";
+@import "../../../../assets/sass/abstracts/mixins";
 
 .step-container {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #707070;
 }
 
 .step-block {
@@ -26,33 +24,30 @@ $step-wizard-circle-radius: 1.8rem !default;
 }
 
 .step-indicator {
-  width: $step-wizard-circle-radius * 2;
-  height: $step-wizard-circle-radius * 2;
-  font-size: $step-wizard-circle-radius;
-  color: $circle-number-color;
-  background: $circle-color;
+  font-size: 1.5rem;
+  color: $black-color;
+  @include circle(3rem,#e9eaea);
   margin: 0 $step-wizard-circle-radius * 1.2;
-  line-height: $step-wizard-circle-radius * 2;
-  border-radius: 50%;
-  border: $step-wizard-circle-radius/15 solid $circle-color;
+  line-height: 3rem;
+  border: $step-wizard-circle-radius/15 solid #e9eaea;
   &.active {
-    background-color: #f9f210;
-    color: $circle-number-color-active;
-    border-color: #f9f210;
+    background-color: $primary-color;
+    color: $white-color;
+    border-color: $primary-color;
     & + .step-text {
-      color: #f9f210;
+      color: $primary-color;
     }
     & ~ .step-rail::before {
-      background: #f9f210;
+      background: $primary-color;
     }
   }
   &.done {
-    background-color: $circle-number-color-active;
-    color: #f9f210;
-    border-color: #f9f210;
+    background-color: $white-color;
+    color: $primary-color;
+    border-color: $primary-color;
     & ~ .step-rail::before,
     & ~ .step-rail::after {
-      background: #f9f210;
+      background: $primary-color;
     }
   }
 }
@@ -60,7 +55,7 @@ $step-wizard-circle-radius: 1.8rem !default;
 @mixin rail() {
   height: 100%;
   width: 50%;
-  background: $circle-connecting-line-color;
+  background: #e9eaea;
 }
 
 .step-rail {
@@ -68,7 +63,7 @@ $step-wizard-circle-radius: 1.8rem !default;
   width: 100%;
   position: absolute;
   left: 0;
-  top: $step-wizard-circle-radius;
+  top: 1.5rem;
   display: flex;
   &::before {
     content: "";
@@ -83,6 +78,12 @@ $step-wizard-circle-radius: 1.8rem !default;
 
 .step-text {
   margin-top: $step-wizard-circle-radius/4;
-  color: $circle-display-text-color;
+  color: #333333 ;
   font-size: $step-wizard-circle-radius * 0.5;
+}
+.general__BG{
+  .content{
+    background-color: #242424;
+    border: 1px solid #707070;
+  }
 }

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./modules/home/home/home.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", redirectTo: 'car', pathMatch: 'full' },
   {
     path: "car",
     loadChildren: "./modules/car/car.module#CarModule",

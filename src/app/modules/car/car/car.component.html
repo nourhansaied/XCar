@@ -1,9 +1,95 @@
-<div class="step-container" *ngIf="steps">
-  <div *ngFor="let step of steps; let i = index" class="step-block">
-    <div class="step-indicator" [ngClass]="{ active: i + 1 === active, done: i + 1 < active }">
-      {{ i + 1 }}
+<section class="general__BG">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 m-auto">
+        <div class="content">
+          <h2>XZERO CAR</h2>
+          <p>اضافة اعلان جديد</p>
+          <div class="step-container" *ngIf="steps">
+            <div *ngFor="let step of steps; let i = index" class="step-block">
+              <div class="step-indicator" [ngClass]="{ active: i + 1 === active, done: i + 1 < active }">
+                {{ i + 1 }}
+              </div>
+              <div class="step-text">{{ step.title }}</div>
+              <div class="step-rail"></div>
+            </div>
+          </div>
+          <form class="text-left p-5" [formGroup]="newRequest">
+
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">أختر الماركه </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1"> الموديل </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">سعة المحرك </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">كيلو متر </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">نمط السيارة </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">نوع ناقل الحركة </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">سنة الصنع </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">اللون </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">السعر(.ج.م) </label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
+                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                </div>
+              </div>
+            </div>
+
+
+
+            <button class="btn btn-primary" (click)="onSubmit(newRequest)">الدخول</button>
+
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="step-text">{{ step }}</div>
-    <div class="step-rail"></div>
   </div>
-</div>
+</section>

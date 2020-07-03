@@ -1,34 +1,10 @@
 
 @import "../../../../../assets/sass/themes/default";
 
-#car {
-  background: #000000 url("../../../../../assets/images/carbg.png");
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  .container {
-    height: 100vh;
-  }
-  .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-    background-image: url("../../../../../assets/images/overlay.svg");
-  }
-
+.general__BG {
   .content {
     background-color: $black-color;
-    color: $white-color;
-    position: relative;
-    z-index: 8;
-    text-align: center;
     border: 1px solid $primary-color;
-    border-radius: 3px;
-    padding: 30px 0;
     h2 {
       color: $primary-color-hovered;
     }

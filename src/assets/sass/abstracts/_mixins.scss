@@ -162,7 +162,11 @@
   height: $d;
 
 }
-
+@mixin circle($d,$color) {
+  @include square($d);
+  background-color: $color;
+  border-radius: 50%;
+}
 @mixin fw($w) {
   @if $w=="l" {
     font-weight: 300;

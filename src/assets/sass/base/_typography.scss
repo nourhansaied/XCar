@@ -2,7 +2,7 @@
  * Basic typography style for copy text
  */
 html, body {
-  font-size: 11px;
+  font-size: 10px;
   @include mq('laptop', 'min'){
     font-size: 12px;
   }
