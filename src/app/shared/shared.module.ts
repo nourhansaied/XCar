@@ -8,7 +8,7 @@ import { ModalComponent } from './components/modal/modal.component';
   imports: [
     CommonModule
   ],
-  providers:[SharedService],
+  providers: [SharedService],
   exports: [ModalComponent]
 })
 export class SharedModule { }

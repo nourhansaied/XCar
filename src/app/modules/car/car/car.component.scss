@@ -1,5 +1,3 @@
-
-
 @import "../../../../assets/sass/themes/default";
 @import "../../../../assets/sass/abstracts/mixins";
 
@@ -26,8 +24,8 @@
 .step-indicator {
   font-size: 1.5rem;
   color: $black-color;
-  @include circle(3rem,#e9eaea);
-  margin: 0 $step-wizard-circle-radius * 1.2;
+  @include circle(3rem, #e9eaea);
+  margin: 0 5.5rem;
   line-height: 3rem;
   border: $step-wizard-circle-radius/15 solid #e9eaea;
   &.active {
@@ -42,9 +40,6 @@
     }
   }
   &.done {
-    background-color: $white-color;
-    color: $primary-color;
-    border-color: $primary-color;
     & ~ .step-rail::before,
     & ~ .step-rail::after {
       background: $primary-color;
@@ -78,12 +73,110 @@
 
 .step-text {
   margin-top: $step-wizard-circle-radius/4;
-  color: #333333 ;
-  font-size: $step-wizard-circle-radius * 0.5;
+
+  font-size: 1.25rem;
 }
-.general__BG{
-  .content{
+.general__BG {
+  .content {
     background-color: #242424;
     border: 1px solid #707070;
+  }
+  label {
+    font-size: 1.25rem;
+  }
+  .form-group {
+    margin-bottom: 2.5rem;
+  }
+  .form-control {
+    height: 2.75rem;
+    margin-bottom: 0;
+    border-radius: 4px;
+    background-color: #202020;
+    border: 1px solid #e9e9e9;
+    color: #e9e9e9;
+  }
+  .process__type {
+    margin-bottom: 3rem;
+    span {
+      font-size: 1.25rem;
+    }
+    label {
+      position: relative;
+      margin-right: 2rem;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 4rem;
+      }
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .title {
+      padding-right: 2rem;
+      font-size: 1.25rem;
+    }
+    .checkmark {
+      position: absolute;
+      top: 7px;
+      right: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #eee;
+      border-radius: 50%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 3px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ffd524;
+      }
+    }
+    &:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    input:checked ~ .checkmark {
+      background-color: #242424;
+      border: 2px solid #ffd524;
+    }
+    input:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  ::ng-deep {
+    .ng-select {
+      .ng-select-container {
+        background-color: #202020;
+        border: 1px solid #e9e9e9;
+        height: 2.75rem;
+        color: #e9e9e9;
+      }
+    }
+  }
+
+  .offers__options {
+    p {
+      margin-bottom: 3rem;
+    }
+    textarea {
+      resize: none;
+      height: 10rem;
+    }
+  }
+  .action__button {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.modal-header {
+  align-items: center;
+  .close {
+    margin: 0;
   }
 }

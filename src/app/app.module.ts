@@ -10,11 +10,12 @@ import { HomeModule } from "./modules/home/home.module";
 import { SharedModule } from "./shared/shared.module";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { PipeModule } from './shared/pipes/pipe.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ModalComponent } from './shared/components/modal/modal.component';
 import { FormsModule } from '@angular/forms';
+import { CustomHttpInterceptor } from './shared/services/http-interceptor';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -36,7 +37,13 @@ import { FormsModule } from '@angular/forms';
     PipeModule,
     ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CustomHttpInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [ModalComponent]
 })

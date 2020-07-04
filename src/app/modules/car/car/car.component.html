@@ -8,7 +8,7 @@
           <p>اضافة اعلان جديد</p>
           <div class="step-container" *ngIf="steps">
             <div *ngFor="let step of steps; let i = index" class="step-block">
-              <div class="step-indicator" [ngClass]="{ active: i + 1 === active, done: i + 1 < active }">
+              <div class="step-indicator" [ngClass]="{ active: i + 1 <= active, done: i + 1 < active }">
                 {{ i + 1 }}
               </div>
               <div class="step-text">{{ step.title }}</div>
@@ -16,76 +16,145 @@
             </div>
           </div>
           <form class="text-left p-5" [formGroup]="newRequest">
+            <div *ngIf="currentStep == 1">
+              <div class="process__type">
 
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">أختر الماركه </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
-                </div>
+                <span>نوع العملية</span>
+                <label>
+                  <input type="radio" value="1" formControlName="adTypeId">
+                  <span class="title">بيع</span>
+                  <span class="checkmark"></span>
+                </label>
+                <label>
+                  <input type="radio" value="2" formControlName="adTypeId">
+                  <span class="title">شراء</span>
+                  <span class="checkmark"></span>
+                </label>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1"> الموديل </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>أختر الماركه </label>
+                    <!-- placeholder="حدد ماركة السيارة" -->
+                    <ng-select [items]="brands" bindLabel="name" bindValue="id" clearAllText="Clear"
+                      formControlName="carBrand" (change)="getModels($event)">
+                    </ng-select>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">سعة المحرك </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label> الموديل </label>
+                    <!-- placeholder="حدد موديل السيارة" -->
+                    <ng-select [items]="models" bindLabel="name" bindValue="id" clearAllText="Clear"
+                      formControlName="modelId">
+                    </ng-select>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">كيلو متر </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>سعة المحرك </label>
+                    <!-- placeholder="الرجاء إدخال سعة المحرك  " -->
+                    <input type="text" class="form-control" formControlName="cc">
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">نمط السيارة </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>كيلو متر </label>
+                    <!-- placeholder="الرجاء إدخال كيلو متر" -->
+                    <input type="text" class="form-control" formControlName="km">
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">نوع ناقل الحركة </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>نمط السيارة </label>
+                    <!-- placeholder="shapeTypeId" -->
+                    <ng-select [items]="shapTypes" bindLabel="name" bindValue="id" clearAllText="Clear"
+                      formControlName="shapeTypeId">
+                    </ng-select>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">سنة الصنع </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>نوع ناقل الحركة </label>
+                    <!-- placeholder="حدد نوع ناقل الحركة " -->
+                    <ng-select [items]="gearboxTypes" bindLabel="name" bindValue="id" clearAllText="Clear"
+                      formControlName="gearboxId">
+                    </ng-select>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">اللون </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>سنة الصنع </label>
+                    <!-- placeholder="الرجاء إدخال سنة الصنع" -->
+                    <input type="text" class="form-control" formControlName="year">
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">السعر(.ج.م) </label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" formControlName="email"
-                    aria-describedby="emailHelp" placeholder="أدخل البريد الإلكتروني">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>اللون </label>
+                    <!-- placeholder="الرجاء إدخال لون السيارة" -->
+                    <ng-select [items]="carColor" bindLabel="name" bindValue="id" clearAllText="Clear"
+                      formControlName="carColor">
+                    </ng-select>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>السعر(.ج.م) </label>
+                    <!-- placeholder="الرجاء إدخال سعر السيارة" -->
+                    <input type="text" class="form-control" formControlName="price">
+                  </div>
+                </div>
+                <div class="col-12 offers__options">
+                  <p>تضمين الإعلان في قسم العروض اذا كنت تقوم بعملية بيع اقل من السعر المحتمل</p>
+                  <div class="form-group">
+                    <label for="">معلومات إضافية حول السيارة</label>
+                    <textarea class="form-control" formControlName="notes"></textarea>
+                  </div>
                 </div>
               </div>
             </div>
 
+            <div *ngIf="currentStep == 3">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>الاميل </label>
+                    <!-- placeholder="الرجاء إدخال سعة المحرك  " -->
+                    <input type="email" class="form-control" formControlName="email">
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label> رقم الجوال </label>
+                    <!-- placeholder="الرجاء إدخال سعة المحرك  " -->
+                    <input type="tel" class="form-control" formControlName="mobile">
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="form-group">
+                    <label>المحافظة </label>
+                    <ng-select [items]="governments" bindLabel="name" bindValue="id"
+                      placeholder="Select your government" clearAllText="Clear" formControlName="governorateId">
+                    </ng-select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="action__button">
+              <button *ngIf="currentStep != 3" class="button button-primary button-lg " (click)="nextStep()">
+                التالى
+              </button>
+              <button *ngIf="currentStep == 3" class="button button-primary button-lg"
+                (click)="onSubmit(newRequest)">تم</button>
 
-
-            <button class="btn btn-primary" (click)="onSubmit(newRequest)">الدخول</button>
+              <button (click)="prevStep()" *ngIf="currentStep != 1" class="button button-primary button-lg ">
+                رجوع
+              </button>
+              <button class="button btn__dismiss button-outline button-lg ">
+                إالغاء
+              </button>
+            </div>
 
           </form>
         </div>
@@ -93,3 +162,18 @@
     </div>
   </div>
 </section>
+<div class="modal fade" bsModal #modal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="dialog-events-name">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-events-name" class="modal-title">تم رفع الاعلان بنجاح</h4>
+        <button type="button" class="close " aria-label="Close" (click)="modal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        سوف نقوم بمراجعه البايانات الخاصه بالاعلان في اقرب وقت
+      </div>
+    </div>
+  </div>
+</div>
