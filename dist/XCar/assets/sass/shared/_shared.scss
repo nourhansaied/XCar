@@ -1,0 +1,60 @@
+.bordered-title {
+  h3 {
+    @extend %colored-border;
+  }
+  p {
+    font-size: 1.5rem;
+    color: rgba($black-color, 0.65);
+  }
+}
+
+::ng-deep {
+  .modal-header {
+    border: 0;
+    @extend %colored-border;
+    
+    &::before {
+      width: 50%;
+    }
+  }
+}
+
+.shifted-title {
+  @extend %shifted-title;
+}
+
+.fake-popup {
+  width: 75%;
+  box-shadow: 0 0.25rem 0.5rem rgba($black-color, 0.2);
+  padding: 3rem;
+  background-color: $white-color;
+  margin-bottom: 5rem;
+}
+
+.general__BG {
+  background: $black-color url(/assets/images/carbg.png);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .container {
+    height: 100vh;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background-image: url(/assets/images/overlay.svg);
+  }
+  .content {
+    color: $white-color;
+    position: relative;
+    z-index: 8;
+    text-align: center;
+    border-radius: 3px;
+    padding: 30px 0;
+  }
+}
