@@ -1,81 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top  victoria-header">
-  <div class="left-side" [ngClass]="{'open' : openMenu}">
-    <i class="icon-menu menu" (click)="toggleMenu()"></i>
-    <div class="pages" [ngClass]="{'openMenu' : openMenu}">
-      <!-- <ul class="navbar-nav mr-auto" [ngClass]="{'show-data' : openMenu}">
-        <li class="nav-item active" (click)="open(aboutUs, 'modal-about modal-lg')">
-          <a class="nav-link">About US </a>
-        </li>
-        <li class="nav-item " (click)="open(help, 'modal-lg')">
-          <a class="nav-link">Help </a>
-        </li>
-        <li class="nav-item " (click)="open(news, 'modal-lg')">
-          <a class="nav-link">News </a>
-        </li>
-        <li class="nav-item " (click)="open(polices, 'modal-lg')">
-          <a class="nav-link">Policies </a>
-        </li>
-        <li class="nav-item " (click)="open(contactUs, 'modal-lg')">
-          <a class="nav-link">Contact Us </a>
-        </li>
-      </ul> -->
-    </div>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <a class="navbar-brand" [routerLink]="['/']"><img src="../../../../assets/images/logo.png" alt=""></a>
-    <ul class="navbar-nav " *ngIf="!openMenu">
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/']">Home </a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']">login</a>
       </li>
       <li class="nav-item">
-        <div class="btn-group" dropdown>
-          <a id="button-signup" dropdownToggle type="button" class="nav-link dropdown-toggle"
-            aria-controls="dropdown-signup">
-            Signup <i class="arrow down"></i>
-          </a>
-          <ul id="dropdown-signup" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-signup">
-            <li role="menuitem"><a class="dropdown-item" [routerLink]="['/register/customer']">Customer</a></li>
-            <li class="divider dropdown-divider"></li>
-            <li role="menuitem"><a class="dropdown-item" [routerLink]="['/register/driver']">Driver</a></li>
-          </ul>
-        </div>
+        <a class="nav-link" [routerLink]="['/signup']">sign up</a>
       </li>
     </ul>
-    <div class="right-side ml-auto">
-      <button class="button button-primary lang " (click)="changeLanguage()">AR</button>
-    </div>
+
   </div>
 </nav>
-
-
-<!-- 
-<ng-template #aboutUs bsModal>
-  <victoria-modal [modalTitle]="aboutUsTitle" [staticPages]="true">
-    <victoria-about-us></victoria-about-us>
-  </victoria-modal>
-</ng-template>
-
-<ng-template #help bsModal>
-  <victoria-modal [modalTitle]="helpTitle" [staticPages]="true">
-    <victoria-help></victoria-help>
-  </victoria-modal>
-</ng-template>
-
-<ng-template #news bsModal>
-  <victoria-modal [modalTitle]="newsTitle" [staticPages]="true">
-    <victoria-news></victoria-news>
-  </victoria-modal>
-</ng-template>
-
-<ng-template #polices bsModal>
-  <victoria-modal [modalTitle]="apoliciesTitle" [staticPages]="true">
-    <victoria-policies></victoria-policies>
-  </victoria-modal>
-</ng-template>
-
-<ng-template #contactUs bsModal>
-  <victoria-modal [modalTitle]="contactUsTitle" [staticPages]="true">
-    <victoria-contact-us></victoria-contact-us>
-  </victoria-modal>
-</ng-template> -->
