@@ -39,6 +39,9 @@
                     <ng-select [items]="brands" bindLabel="name" bindValue="id" clearAllText="Clear"
                       formControlName="carBrand" (change)="getModels($event)">
                     </ng-select>
+                    <span *ngIf="newRequest.get('carBrand').invalid && !newRequest.get('carBrand').untouched"
+                      class="d-block text-danger p-3">carBrand is invalid! </span>
+
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -48,6 +51,8 @@
                     <ng-select [items]="models" bindLabel="name" bindValue="id" clearAllText="Clear"
                       formControlName="modelId">
                     </ng-select>
+                    <span *ngIf="newRequest.get('modelId').invalid && !newRequest.get('modelId').untouched"
+                      class="d-block text-danger p-3">modelId is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -55,6 +60,9 @@
                     <label>سعة المحرك </label>
                     <!-- placeholder="الرجاء إدخال سعة المحرك  " -->
                     <input type="text" class="form-control" formControlName="cc">
+
+                    <span *ngIf="newRequest.get('cc').invalid && !newRequest.get('cc').untouched"
+                      class="d-block text-danger p-3">cc is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -62,6 +70,8 @@
                     <label>كيلو متر </label>
                     <!-- placeholder="الرجاء إدخال كيلو متر" -->
                     <input type="text" class="form-control" formControlName="km">
+                    <span *ngIf="newRequest.get('km').invalid && !newRequest.get('km').untouched"
+                      class="d-block text-danger p-3">km is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -71,6 +81,8 @@
                     <ng-select [items]="shapTypes" bindLabel="name" bindValue="id" clearAllText="Clear"
                       formControlName="shapeTypeId">
                     </ng-select>
+                    <span *ngIf="newRequest.get('shapeTypeId').invalid && !newRequest.get('shapeTypeId').untouched"
+                      class="d-block text-danger p-3">shapeTypeId is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -80,6 +92,8 @@
                     <ng-select [items]="gearboxTypes" bindLabel="name" bindValue="id" clearAllText="Clear"
                       formControlName="gearboxId">
                     </ng-select>
+                    <span *ngIf="newRequest.get('gearboxId').invalid && !newRequest.get('gearboxId').untouched"
+                      class="d-block text-danger p-3">gearboxId is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -87,6 +101,8 @@
                     <label>سنة الصنع </label>
                     <!-- placeholder="الرجاء إدخال سنة الصنع" -->
                     <input type="text" class="form-control" formControlName="year">
+                    <span *ngIf="newRequest.get('year').invalid && !newRequest.get('year').untouched"
+                      class="d-block text-danger p-3">year is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -96,6 +112,8 @@
                     <ng-select [items]="carColor" bindLabel="name" bindValue="id" clearAllText="Clear"
                       formControlName="carColor">
                     </ng-select>
+                    <span *ngIf="newRequest.get('carColor').invalid && !newRequest.get('carColor').untouched"
+                      class="d-block text-danger p-3">carColor is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -103,6 +121,8 @@
                     <label>السعر(.ج.م) </label>
                     <!-- placeholder="الرجاء إدخال سعر السيارة" -->
                     <input type="text" class="form-control" formControlName="price">
+                    <span *ngIf="newRequest.get('price').invalid && !newRequest.get('price').untouched"
+                      class="d-block text-danger p-3">price is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 offers__options">
@@ -110,6 +130,8 @@
                   <div class="form-group">
                     <label for="">معلومات إضافية حول السيارة</label>
                     <textarea class="form-control" formControlName="notes"></textarea>
+                    <span *ngIf="newRequest.get('notes').invalid && !newRequest.get('notes').untouched"
+                      class="d-block text-danger p-3">notes is invalid! </span>
                   </div>
                 </div>
               </div>
@@ -122,6 +144,8 @@
                     <label>الاميل </label>
                     <!-- placeholder="الرجاء إدخال سعة المحرك  " -->
                     <input type="email" class="form-control" formControlName="email">
+                    <span *ngIf="newRequest.get('email').invalid && !newRequest.get('email').untouched"
+                      class="d-block text-danger p-3">email is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -129,6 +153,8 @@
                     <label> رقم الجوال </label>
                     <!-- placeholder="الرجاء إدخال سعة المحرك  " -->
                     <input type="tel" class="form-control" formControlName="mobile">
+                    <span *ngIf="newRequest.get('mobile').invalid && !newRequest.get('mobile').untouched"
+                      class="d-block text-danger p-3">mobile is invalid! </span>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -137,6 +163,8 @@
                     <ng-select [items]="governments" bindLabel="name" bindValue="id"
                       placeholder="Select your government" clearAllText="Clear" formControlName="governorateId">
                     </ng-select>
+                    <span *ngIf="newRequest.get('governorateId').invalid && !newRequest.get('governorateId').untouched"
+                      class="d-block text-danger p-3">governorateId is invalid! </span>
                   </div>
                 </div>
               </div>

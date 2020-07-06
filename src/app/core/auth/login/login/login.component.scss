@@ -1,5 +1,6 @@
 @import "../../../../../assets/sass/themes/default";
 .general__BG {
+  padding-bottom: 30rem;
   .content {
     background-color: $black-color;
     border: 1px solid $primary-color;
@@ -52,12 +53,11 @@
           font-size: 14px;
           margin-bottom: 0;
         }
-        &.sign__up{
-           a{
+        &.sign__up {
+          a {
             color: $white-color;
-           }
           }
-        
+        }
       }
     }
   }

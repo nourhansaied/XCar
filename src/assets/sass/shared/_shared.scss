@@ -34,6 +34,7 @@
 .general__BG {
   background: $black-color url(/assets/images/carbg.png);
   height: 100%;
+  padding-top: 5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -51,6 +52,7 @@
     bottom: 0;
     z-index: 2;
     background-image: url(/assets/images/overlay.svg);
+    background-size: cover;
   }
   .content {
     color: $white-color;
