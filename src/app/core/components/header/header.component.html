@@ -1,19 +1,67 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Logo</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="../../../../assets/images/logo.png" alt="">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <ul class="navbar-nav">
 
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/']" [routerLinkActive]="'is-active'">{{'HOME.home' | translate}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/list']"
+        [routerLinkActive]="'is-active'">{{'HOME.car-for-by' | translate}}</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/ads']" [routerLinkActive]="'is-active'">{{'HOME.buy-car' | translate}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/home']"
+        [routerLinkActive]="'is-active'">{{'HOME.Installment' | translate}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/news']" [routerLinkActive]="'is-active'">{{'HOME.news' | translate}}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">{{'HOME.more' | translate}}</a>
+    </li>
+    <li class="nav-item more">
+      <a class="nav-link">{{'HOME.contact-us' | translate}}</a>
+    </li>
+  </ul>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
+
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/login']">login</a>
+        <a class="nav-link" [routerLink]="['/login']">{{'login' | translate}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/signup']">sign up</a>
+        <a class="nav-link" [routerLink]="['/signup']">{{'sign-up' | translate}}</a>
+      </li>
+      <li class="nav-item" (click)="changeLanguage()">
+        <a class="nav-link">{{'Lang' | translate}}</a>
       </li>
     </ul>
 
   </div>
 </nav>
+
+<div class="modal fade" bsModal #modal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="dialog-events-name">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-events-name" class="modal-title">تم رفع الاعلان بنجاح</h4>
+        <button type="button" class="close " aria-label="Close" (click)="modal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        سوف نقوم بمراجعه البايانات الخاصه بالاعلان في اقرب وقت
+      </div>
+    </div>
+  </div>
+</div>

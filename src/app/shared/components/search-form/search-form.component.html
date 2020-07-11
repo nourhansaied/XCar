@@ -1,0 +1,43 @@
+<section id="search-form">
+  <form class="text-left py-5" [formGroup]="search">
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="form-group">
+          <!-- placeholder="حدد ماركة السيارة" -->
+          <ng-select [items]="brands" bindLabel="name" bindValue="id" clearAllText="Clear"
+            placeholder="{{'car-brand' | translate}}" formControlName="carBrand" (change)="getModels($event)">
+          </ng-select>
+          <span *ngIf="search.get('carBrand').invalid && !search.get('carBrand').untouched"
+            class="d-block text-danger p-3">carBrand is invalid! </span>
+
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="form-group">
+          <!-- placeholder="حدد موديل السيارة" -->
+          <ng-select [items]="models" bindLabel="name" bindValue="id" clearAllText="Clear"
+            placeholder="{{'car-model' | translate}}" formControlName="modelId">
+          </ng-select>
+          <span *ngIf="search.get('modelId').invalid && !search.get('modelId').untouched"
+            class="d-block text-danger p-3">modelId is invalid! </span>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="form-group">
+          <ng-select [items]="governments" bindLabel="name" bindValue="id" placeholder="{{'government' | translate}}"
+            clearAllText="Clear" formControlName="governorateId">
+          </ng-select>
+          <span *ngIf="search.get('governorateId').invalid && !search.get('governorateId').untouched"
+            class="d-block text-danger p-3">governorateId is invalid! </span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="action__button">
+          <button class="button button-primary button-sm" (click)="onSubmit(search)">{{'search' | translate}}</button>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</section>

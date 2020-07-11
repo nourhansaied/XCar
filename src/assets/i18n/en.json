@@ -1,30 +1,26 @@
 {
-  "about-us":"About us",
-  "help" : "Help",
-  "news":"News",
-  "polices":"Polices",
-  "contactUs":"Get in touch with us",
-  "about-us-home": "Why Victoria",
-  "about-us-desc":"Victoria is an application targeting women who want to be self-employed and have a carrier, the application developed by an Egyptian company called Egyptian Saudi For Telecom and Information Technology Acronym to 'EST-IT. 'for more info kindly visit  www.egyst-it.com ",
-  "victoria-inovition-title": "Innovations of Victoria",
-  "victoria-inovation-desc": "Being a part of the taxi services in the future and looking forward to the next, by growing our service to give drivers and customers a unique opportunity. And promote the laws of women in society",
-  "rideOption": {
-    "firstOption": {
-      "title": "Normal",
-      "description": "Porro nascetur nisl metus, gravida, maecenas? Integer, similique commodi, natus."
-    },
-    "secondOption": {
-      "title": "V-Rotal",
-      "description": "Sint interdum curae architecto ridiculus gravida distinctio! Montes, sem suscipit."
-    },
-    "thirdOption": {
-      "title": "Groups",
-      "description": "Et eget? Placerat expedita condimentum pariatur ipsa pellentesque curae mauris."
-    },
-    "fourthOption": {
-      "title": "Air Port",
-      "description": "Dignissim pellentesque cillum nostra ratione, quae, totam mus?"
-    }
-  },
-  "login": "Login"
+  "help": "Help",
+  "news": "News",
+  "polices": "Polices",
+  "contactUs": "Get in touch with us",
+  "login": "Login",
+  "sign-up": "Sign up",
+  "Lang": "العربيه",
+  "car-brand": "Card brand",
+  "car-model": "Car model",
+  "government": "Your government",
+  "search": "Search",
+  "buy-sell-through-website": "Experience buying and selling cars through our website",
+  "buy-new-or-view-old": "You can buy a new car or view your old car on our website",
+  "do-your-search-now": "Do your search now",
+  "you-can-add-old-car-put-it-for-sale": "You can also add your old car and put it up for sale",
+  "HOME": {
+    "home": "Home",
+    "car-for-by": "Cars for sale",
+    "buy-car": "Sell ​​your car",
+    "Installment": "Installment service",
+    "news": "Automotive News",
+    "more": "More",
+    "contact-us": "Contact Us"
+  }
 }

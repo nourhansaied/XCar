@@ -16,11 +16,9 @@ export class AppComponent {
     private _switchLang: SwitchLangService,
     private renderer: Renderer,
   ) {
-    this._translate.setDefaultLang("ar");
     let targetClass: boolean;
     let targetDir;
     this._translate.use(this._switchLang.getCurrentLanguage());
-
     if (this._switchLang.getCurrentLanguage() == "ar") {
       this.arabicLang = true;
       targetClass = true;
@@ -36,6 +34,14 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this._translate.setDefaultLang("ar");
+    let cashedLang = window.localStorage.getItem('SelectedLanguage');
+    if (cashedLang) {
+      this._translate.setDefaultLang(`${cashedLang}`);
+      this._switchLang.setCurrentLanguage(`${cashedLang}`);
+    } else {
+      this._translate.setDefaultLang("ar");
+      this._switchLang.setCurrentLanguage("ar");
+    }
+
   }
 }

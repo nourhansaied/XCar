@@ -27,6 +27,7 @@ export class SwitchLangService {
 
   public getCurrentLanguage(): string {
     let selectedLanguage = window.localStorage.getItem(this.SelectedLanguageKEY);
+    console.log(selectedLanguage, 'inside service')
     if (!selectedLanguage) return "ar";
     return selectedLanguage;
   }

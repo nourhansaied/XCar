@@ -36,3 +36,23 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// Dark grey
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
+
+.ng-select {
+  .ng-select-container {
+    min-height: 3rem;
+  }
+  .ng-arrow-wrapper {
+    .ng-arrow {
+      border-color: $primary-color transparent transparent;
+    }
+  }
+}
+::ng-deep {
+  .modal-header {
+    .close {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

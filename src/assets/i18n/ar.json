@@ -1,31 +1,26 @@
 {
-  "about-us":"Aabout us",
-  "help" : "Help",
-  "news":"News",
-  "polices":"Polices",
-  "contactUs":"ابق على تواصل معنا",
-  "about-us-home": "Why Victoria",
-  "about-us-desc":"Victoria is an application targeting women who want to be self-employed and have a carrier, the application developed by an Egyptian company called Egyptian Saudi For Telecom and Information Technology Acronym to 'EST-IT. 'for more info kindly visit  www.egyst-it.com ",
-  "victoria-inovition-title": "Innovations of Victoria",
-  "victoria-inovation-desc": "Being a part of the taxi services in the future and looking forward to the next, by growing our service to give drivers and customers a unique opportunity. And promote the laws of women in society",
-  
-  "rideOption": {
-    "firstOption": {
-      "title": "عادي",
-      "description": "Porro nascetur nisl metus, gravida, maecenas? Integer, similique commodi, natus."
-    },
-    "secondOption": {
-      "title": "ملكي",
-      "description": "Sint interdum curae architecto ridiculus gravida distinctio! Montes, sem suscipit, ultrices aenean diamlorem eius esse quisque, tellus cubilia! Accusantium corporis."
-    },
-    "thirdOption": {
-      "title": "مجموعات",
-      "description": "Et eget? Placerat expedita condimentum pariatur ipsa pellentesque curae mauris."
-    },
-    "fourthOption": {
-      "title": "مطار",
-      "description": "Dignissim pellentesque cillum nostra ratione, quae, totam mus? Netus irure aliquip repellendus tellus gravida eleifend ante, aliquam, ea adipisci volutpat."
-    }
-  },
-  "login": "الدخول"
+  "help": "Help",
+  "news": "News",
+  "polices": "Polices",
+  "contactUs": "ابق على تواصل معنا",
+  "login": "الدخول",
+  "sign-up": "حساب جديد",
+  "Lang": "English",
+  "car-brand": "أختر الماركه",
+  "car-model": "الموديل",
+  "government": "المحافظة",
+  "search": "بحث",
+  "buy-sell-through-website": "قم بتجربة بيع وشراء السيارات من خلال موقعنا",
+  "buy-new-or-view-old": "يمكنك شراء سيارة جديدة او عرض سيارتك القديمة على موقعنا",
+  "do-your-search-now": "قم بالبحث الان",
+  "you-can-add-old-car-put-it-for-sale": "يمكنك أيضا إضافة سيارتك القديمة وعرضها للبيع",
+  "HOME": {
+    "home": "الرئيسية",
+    "car-for-by": "سيارات للبيع",
+    "buy-car": "بيع سيارتك",
+    "Installment": "خدمة التقسيط",
+    "news": " اخبار السيارات",
+    "more": " المزيد",
+    "contact-us": " اتصل بنا"
+  }
 }

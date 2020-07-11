@@ -1,27 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
-import { HomeRoutingModule } from './home-routing.module';
-import { RideComponent } from './components/ride/ride.component';
-import { ModalModule, BsModalRef } from "ngx-bootstrap/modal";
-import { SharedModule } from 'src/app/shared/shared.module';
-import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 import { TranslateModule } from "@ngx-translate/core"
-import { PipeModule } from 'src/app/shared/pipes/pipe.module';
-import { AboutUsModule } from './components/about-us/about-us.module';
-import { RideOptionsModalContentComponent } from './components/ride/ride-options-modal-content/ride-options-modal-content.component';
-
+import { RouterModule } from '@angular/router';
+import { SearchFormModule } from 'src/app/shared/components/search-form/search-form.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
-  declarations: [HomeComponent, RideComponent, RideOptionsModalContentComponent],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
-    SharedModule,
-    HomeRoutingModule,
     TranslateModule,
-    ModalModule.forRoot(),
-    PipeModule,
-    AboutUsModule
-    
+    SearchFormModule,
+    RouterModule.forChild([{
+      path: '',
+      component: HomeComponent
+    }]),
+    ModalModule
   ]
 })
 export class HomeModule { }

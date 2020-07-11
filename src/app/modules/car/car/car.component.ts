@@ -81,7 +81,6 @@ export class CarComponent implements OnInit {
     });
 
   }
-  // AdTypeId - ModelId - ShapeTypeId - GearboxId - GovernorateId - Cc -Km - Price - Year - Notes - Region - Mobile - OptionsIds [Array]
 
   ngOnInit() {
 

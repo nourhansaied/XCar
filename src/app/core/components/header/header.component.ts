@@ -25,42 +25,16 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private sharedSer: SharedService
   ) {
-    this._translate.get("login").subscribe(res => (this.modalTitle = res));
-    this.subscriptionData = {};
-    this.subscriptionData["about-us"] = this._translate
-      .get("about-us")
-      .subscribe(res => {
-        this.aboutUsTitle = res;
-      });
-    this.subscriptionData["help"] = this._translate
-      .get("help")
-      .subscribe(res => {
-        this.helpTitle = res;
-      });
-    this.subscriptionData["news"] = this._translate
-      .get("news")
-      .subscribe(res => {
-        this.newsTitle = res;
-      });
-    this.subscriptionData["polices"] = this._translate
-      .get("polices")
-      .subscribe(res => {
-        this.apoliciesTitle = res;
-      });
-    this.subscriptionData["contactUs"] = this._translate
-      .get("contactUs")
-      .subscribe(res => {
-        this.contactUsTitle = res;
-      });
+
   }
 
-  ngOnInit() {}
-
-  toggleMenu() {
-    this.openMenu = !this.openMenu;
+  ngOnInit() {
+    console.log('asdasd')
   }
   changeLanguage() {
+    console.log('asdasd')
     let lang = this._switchLang.getCurrentLanguage();
+    console.log(lang)
     if (lang == "ar") {
       this._switchLang.setCurrentLanguage("en");
       this._translate.use("en");
@@ -70,9 +44,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  public open(template: TemplateRef<any>, classes?: string) {
-    this.sharedSer.openModal(template, `${classes}`);
-  }
+  // public open(template: TemplateRef<any>, classes?: string) {
+  //   this.sharedSer.openModal(template, `${classes}`);
+  // }
 
-  
+
 }

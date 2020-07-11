@@ -1,50 +1,92 @@
 @import "../../../../assets/sass/main";
-#ride-option {
-  padding: 4rem 0;
-  height: 52rem;
-
-  .component-header {
-    text-align: center;
-    margin-bottom: 4rem;
-
-    h1 {
-      font-family: Poppins-SemiBoldItalic, sans-serif;
-      font-size: 3.25rem;
-      text-transform: capitalize;
+.content {
+  p {
+    &.new-experiment {
+      font-size: 2.5rem;
     }
-
-    p {
+    &.offering {
       font-size: 1.25rem;
+    }
+    &.search-now {
+      font-size: 1.75rem;
+    }
+    &.auto-stelling {
+      font-family: "Montserrat";
+      font-size: 1rem;
+      color: $white-color;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: $primary-color;
+        margin-left: 2rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        display: inline-flex;
+        &:hover {
+          background-color: darken($color: $primary-color, $amount: 20);
+        }
+      }
+    }
+  }
+  button {
+    margin-bottom: 1rem;
+  }
+}
+
+::ng-deep {
+  .general__BG {
+    .content {
+      padding: 10rem 0 5rem;
+    }
+  }
+  #search__modal {
+    @media (min-width: 992px) {
+      .modal-lg {
+        max-width: 900px;
+      }
+    }
+    .modal-content {
+      background-color: $black-color;
+      border: 1px solid $primary-color;
+      border-radius: 4px;
+      .modal-header {
+        padding-bottom: 0;
+        span {
+          color: $white-color;
+        }
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+      .modal-body {
+        padding-top: 0;
+      }
     }
   }
 }
-#header {
-  // background-image: url('../../.././../assets/images/1.png');
-  height: calc(100vh - 6.25rem);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($black-color, 0.22);
-  }
-  .content {
-    padding-top: 15rem;
-    h2 {
-      color: $primary-color;
-      font-size: 4.5rem;
-      font-weight: bold;
+// .content[_ngcontent-qla-c2] p.auto-stelling span
+::ng-deep {
+  #rtl {
+    #search__modal {
+      .modal-header {
+        .close {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
     }
     p {
-      font-size: 17px;
-      width: 80%;
-      color: $white-color;
-      &.sub-title {
-        width: 100%;
-        font-size: 1.7rem;
+      &.auto-stelling {
+        span {
+          margin-left: 0;
+          margin-right: 2rem;
+        }
       }
     }
   }
