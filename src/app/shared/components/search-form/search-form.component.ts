@@ -49,5 +49,7 @@ export class SearchFormComponent implements OnInit {
       }
     });
   }
+  onSubmit(form) {
 
+  }
 }
