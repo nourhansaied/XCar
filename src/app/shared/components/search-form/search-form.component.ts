@@ -44,6 +44,7 @@ export class SearchFormComponent implements OnInit {
       endpoint: this.basUrl + Endpoint.carModels,
       params: { id: brandId }
     }).subscribe(res => {
+
       if (res && res['models'].length > 0) {
         this.models = res['models']
       }
